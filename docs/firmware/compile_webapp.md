@@ -8,10 +8,13 @@ file. The WebApp is served to the browser by the embedded web server and then
 runs on the client side. The communication between the frontend and the ESP32
 running OpenDTU-OnBattery is done using the Web API.
 
-The WebApp has to be (re-)compiled before building the firmware, as the WebApp
-compilation result is not versioned in Git. A PlatformIO pre-script makes sure
-that an up-to-date WebApp is available in your working directory right before
-attempting to build the firmware.
+!!! danger "Difference to upstream project"
+    Unlike in the upstream project, the WebApp has to be (re-)compiled before
+    building the firmware, as the WebApp compilation result is not versioned in
+    Git.
+
+A PlatformIO pre-script makes sure that an up-to-date WebApp is available in
+your working directory right before attempting to build the firmware.
 
 There is a development server which hosts the frontend at your local computer
 and allows easy development. It will forward the requests to the backend

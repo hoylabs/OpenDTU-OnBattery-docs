@@ -106,34 +106,34 @@ cmd topics are used to set values. Status topics are updated from values set in 
 
 | Topic                                   | R / W | Description                                          | Value / Unit               |
 | --------------------------------------- | ----- | ---------------------------------------------------- | -------------------------- |
-| victron/[serial]/PID                    | R     | Product description                                  | text                       |
-| victron/[serial]/SER                    | R     | Serial number                                        | text                       |
-| victron/[serial]/FW                     | R     | Firmware number                                      | int                        |
-| victron/[serial]/LOAD                   | R     | Load output state                                    | ON /  OFF                  |
-| victron/[serial]/CS                     | R     | State of operation                                   | text, e.g., "Bulk"         |
-| victron/[serial]/ERR                    | R     | Error code                                           | text, e.g., "No error"     |
-| victron/[serial]/OR                     | R     | Off reasen                                           | text, e.g., "Not off"      |
-| victron/[serial]/MPPT                   | R     | Tracker operation mode                               | text, e.g., "MPP Tracker active" |
-| victron/[serial]/HSDS                   | R     | Day sequence number (0...364)                        | int in days                |
+| `victron/[serial]/PID`                  | R     | Product description                                  | text                       |
+| `victron/[serial]/SER`                  | R     | Serial number                                        | text                       |
+| `victron/[serial]/FW`                   | R     | Firmware number                                      | int                        |
+| `victron/[serial]/LOAD`                 | R     | Load output state                                    | ON /  OFF                  |
+| `victron/[serial]/CS`                   | R     | State of operation                                   | text, e.g., "Bulk"         |
+| `victron/[serial]/ERR`                  | R     | Error code                                           | text, e.g., "No error"     |
+| `victron/[serial]/OR`                   | R     | Off reasen                                           | text, e.g., "Not off"      |
+| `victron/[serial]/MPPT`                 | R     | Tracker operation mode                               | text, e.g., "MPP Tracker active" |
+| `victron/[serial]/HSDS`                 | R     | Day sequence number (0...364)                        | int in days                |
 
 ### Battery output
 
 | Topic                                   | R / W | Description                                          | Value / Unit               |
 | --------------------------------------- | ----- | ---------------------------------------------------- | -------------------------- |
-| victron/[serial]/V                      | R     | Voltage                                              | Volt (V)                   |
-| victron/[serial]/I                      | R     | Current                                              | Ampere (A)                 |
+| `victron/[serial]/V`                    | R     | Voltage                                              | Volt (V)                   |
+| `victron/[serial]/I`                    | R     | Current                                              | Ampere (A)                 |
 
 ### Solar input
 
 | Topic                                   | R / W | Description                                          | Value / Unit               |
 | --------------------------------------- | ----- | ---------------------------------------------------- | -------------------------- |
-| victron/[serial]/VPV                    | R     | Voltage                                              | Volt (V)                   |
-| victron/[serial]/PPV                    | R     | Power                                                | Watt (W)                   |
-| victron/[serial]/H19                    | R     | Yield total (user resettable counter)                | Kilo watt hours (kWh)      |
-| victron/[serial]/H20                    | R     | Yield today                                          | Kilo watt hours (kWh)      |
-| victron/[serial]/H21                    | R     | Maximum power today                                  | Watt (W)                   |
-| victron/[serial]/H22                    | R     | Yield yesterday                                      | Kilo watt hours (kWh)      |
-| victron/[serial]/H23                    | R     | Maximum power yesterday                              | Watt (W)                   |
+| `victron/[serial]/VPV`                  | R     | Voltage                                              | Volt (V)                   |
+| `victron/[serial]/PPV`                  | R     | Power                                                | Watt (W)                   |
+| `victron/[serial]/H19`                  | R     | Yield total (user resettable counter)                | Kilo watt hours (kWh)      |
+| `victron/[serial]/H20`                  | R     | Yield today                                          | Kilo watt hours (kWh)      |
+| `victron/[serial]/H21`                  | R     | Maximum power today                                  | Watt (W)                   |
+| `victron/[serial]/H22`                  | R     | Yield yesterday                                      | Kilo watt hours (kWh)      |
+| `victron/[serial]/H23`                  | R     | Maximum power yesterday                              | Watt (W)                   |
 
 ## (Pylontech) Battery topics
 
@@ -141,67 +141,67 @@ cmd topics are used to set values. Status topics are updated from values set in 
     In particular, topics specific to the JK BMS and Victron SmartShunt are not
     yet documented.
 
-| Topic                                   | R / W | Description                                          | Value / Unit               |
-| --------------------------------------- | ----- | ---------------------------------------------------- | -------------------------- |
-| battery/settings/chargeVoltage          | R     | Voltage                                              | Volt (V)                   |
-| battery/settings/chargeCurrentLimitation | R    | BMS requested max. charge current                    | Ampere (A)                 |
-| battery/settings/dischargeCurrentLimitation | R | BMS requested max. discharge current                 | Ampere (A)                 |
-| battery/stateOfCharge                   | R     | State of Health                                      | %                          |
-| battery/stateOfHealth                   | R     | State of Charge                                      | %                          |
-| battery/dataAge                         | R     | How old the data is                                  | Seconds                    |
-| battery/voltage                         | R     | Actual voltage                                       | Volt (V)                   |
-| battery/current                         | R     | Actual current                                       | Ampere (A)                 |
-| battery/temperature                     | R     | Actual temperature                                   | °C                         |
-| battery/alarm/overCurrentDischarge      | R     | Alarm: High discharge current                        | 0 / 1                      |
-| battery/alarm/underTemperature          | R     | Alarm: Low temperature                               | 0 / 1                      |
-| battery/alarm/overTemperature           | R     | Alarm: High temperature                              | 0 / 1                      |
-| battery/alarm/underVoltage              | R     | Alarm: Low voltage                                   | 0 / 1                      |
-| battery/alarm/overVoltage               | R     | Alarm: High voltage                                  | 0 / 1                      |
-| battery/alarm/bmsInternal               | R     | Alarm: BMS internal                                  | 0 / 1                      |
-| battery/alarm/overCurrentCharge         | R     |                                                      |                            |
-| battery/warning/highCurrentDischarge    | R     | Warning: High discharge current                      | 0 / 1                      |
-| battery/warning/lowTemperature          | R     | Warning: Low temperature                             | 0 / 1                      |
-| battery/warning/highTemperature         | R     | Warning: High temperature                            | 0 / 1                      |
-| battery/warning/lowVoltage              | R     | Warning: Low voltage                                 | 0 / 1                      |
-| battery/warning/highVoltage             | R     | Warning: High voltage                                | 0 / 1                      |
-| battery/warning/bmsInternal             | R     | Warning: BMS internal                                | 0 / 1                      |
-| battery/manufacturer                    | R     | Manufacturer                                         | String                     |
-| battery/charging/chargeEnabled          | R     | Charge enabled flag                                  | 0 / 1                      |
-| battery/charging/dischargeEnabled       | R     | Discharge enabled flag                               | 0 / 1                      |
-| battery/charging/chargeImmediately      | R     | Charge immediately flag                              | 0 / 1                      |
+| Topic                                         | R / W | Description                                          | Value / Unit               |
+| --------------------------------------------- | ----- | ---------------------------------------------------- | -------------------------- |
+| `battery/settings/chargeVoltage`              | R     | Voltage                                              | Volt (V)                   |
+| `battery/settings/chargeCurrentLimitation`    | R     | BMS requested max. charge current                    | Ampere (A)                 |
+| `battery/settings/dischargeCurrentLimitation` | R     | BMS requested max. discharge current                 | Ampere (A)                 |
+| `battery/stateOfCharge`                       | R     | State of Health                                      | %                          |
+| `battery/stateOfHealth`                       | R     | State of Charge                                      | %                          |
+| `battery/dataAge`                             | R     | How old the data is                                  | Seconds                    |
+| `battery/voltage`                             | R     | Actual voltage                                       | Volt (V)                   |
+| `battery/current`                             | R     | Actual current                                       | Ampere (A)                 |
+| `battery/temperature`                         | R     | Actual temperature                                   | °C                         |
+| `battery/alarm/overCurrentDischarge`          | R     | Alarm: High discharge current                        | 0 / 1                      |
+| `battery/alarm/underTemperature`              | R     | Alarm: Low temperature                               | 0 / 1                      |
+| `battery/alarm/overTemperature`               | R     | Alarm: High temperature                              | 0 / 1                      |
+| `battery/alarm/underVoltage`                  | R     | Alarm: Low voltage                                   | 0 / 1                      |
+| `battery/alarm/overVoltage`                   | R     | Alarm: High voltage                                  | 0 / 1                      |
+| `battery/alarm/bmsInternal`                   | R     | Alarm: BMS internal                                  | 0 / 1                      |
+| `battery/alarm/overCurrentCharge`             | R     |                                                      |                            |
+| `battery/warning/highCurrentDischarge`        | R     | Warning: High discharge current                      | 0 / 1                      |
+| `battery/warning/lowTemperature`              | R     | Warning: Low temperature                             | 0 / 1                      |
+| `battery/warning/highTemperature`             | R     | Warning: High temperature                            | 0 / 1                      |
+| `battery/warning/lowVoltage`                  | R     | Warning: Low voltage                                 | 0 / 1                      |
+| `battery/warning/highVoltage`                 | R     | Warning: High voltage                                | 0 / 1                      |
+| `battery/warning/bmsInternal`                 | R     | Warning: BMS internal                                | 0 / 1                      |
+| `battery/manufacturer`                        | R     | Manufacturer                                         | String                     |
+| `battery/charging/chargeEnabled`              | R     | Charge enabled flag                                  | 0 / 1                      |
+| `battery/charging/dischargeEnabled`           | R     | Discharge enabled flag                               | 0 / 1                      |
+| `battery/charging/chargeImmediately`          | R     | Charge immediately flag                              | 0 / 1                      |
 
 ## Huawei AC charger topics
 
 | Topic                                   | R / W | Description                                          | Value / Unit               |
 | --------------------------------------- | ----- | ---------------------------------------------------- | -------------------------- |
-| huawei/cmd/limit_online_voltage         | W     | Online voltage (i.e. CAN bus connected)              | Volt (V)                   |
-| huawei/cmd/limit_online_current         | W     | Online current (i.e. CAN bus connected)              | Ampere (A)                 |
-| huawei/cmd/limit_offline_voltage        | W     | Offline voltage (i.e. CAN bus not connected)         | Volt (V)                   |
-| huawei/cmd/limit_offline_current        | W     | Offline current (i.e. CAN bus not connected)         | Ampere (A)                 |
-| huawei/cmd/mode                         | W     | Controls GPIO output pin to switch slot detect       | 0 (off) / 1 (on) / 2 (set automatically depending on online_current value) / 3 (set automatically based on Power Meter reading ) |
-| huawei/mode                             | R     | Currently set charging mode                          | see above                  |
-| huawei/data_age                         | R     | How old the data is                                  | Seconds                    |
-| huawei/input_voltage                    | R     | Input voltage                                        | Volt (V)                   |
-| huawei/input_current                    | R     | Input current                                        | Ampere (A)                 |
-| huawei/input_power                      | R     | Input power                                          | Watt (W)                   |
-| huawei/output_voltage                   | R     | Output voltage                                       | Volt (V)                   |
-| huawei/output_current                   | R     | Output current                                       | Ampere (A)                 |
-| huawei/max_output_current               | R     | Maximum output current (set using the online limit)  | Ampere (A)                 |
-| huawei/output_power                     | R     | Output power                                         | Watt (W)                   |
-| huawei/input_temp                       | R     | Input air temperature                                | °C                         |
-| huawei/output_temp                      | R     | Output air temperature                               | °C                         |
-| huawei/efficiency                       | R     | Efficiency                                           | Percentage                 |
+| `huawei/cmd/limit_online_voltage`       | W     | Online voltage (i.e. CAN bus connected)              | Volt (V)                   |
+| `huawei/cmd/limit_online_current`       | W     | Online current (i.e. CAN bus connected)              | Ampere (A)                 |
+| `huawei/cmd/limit_offline_voltage`      | W     | Offline voltage (i.e. CAN bus not connected)         | Volt (V)                   |
+| `huawei/cmd/limit_offline_current`      | W     | Offline current (i.e. CAN bus not connected)         | Ampere (A)                 |
+| `huawei/cmd/mode`                       | W     | Controls GPIO output pin to switch slot detect       | 0 (off) / 1 (on) / 2 (set automatically depending on online_current value) / 3 (set automatically based on Power Meter reading ) |
+| `huawei/mode`                           | R     | Currently set charging mode                          | see above                  |
+| `huawei/data_age`                       | R     | How old the data is                                  | Seconds                    |
+| `huawei/input_voltage`                  | R     | Input voltage                                        | Volt (V)                   |
+| `huawei/input_current`                  | R     | Input current                                        | Ampere (A)                 |
+| `huawei/input_power`                    | R     | Input power                                          | Watt (W)                   |
+| `huawei/output_voltage`                 | R     | Output voltage                                       | Volt (V)                   |
+| `huawei/output_current`                 | R     | Output current                                       | Ampere (A)                 |
+| `huawei/max_output_current`             | R     | Maximum output current (set using the online limit)  | Ampere (A)                 |
+| `huawei/output_power`                   | R     | Output power                                         | Watt (W)                   |
+| `huawei/input_temp`                     | R     | Input air temperature                                | °C                         |
+| `huawei/output_temp`                    | R     | Output air temperature                               | °C                         |
+| `huawei/efficiency`                     | R     | Efficiency                                           | Percentage                 |
 
 ## Power Limiter topics
 
 ### General
 
-| Topic                                        | R / W | Description                                    | Value     |
-| -------------------------------------------- | -- | ------------------------------------------------- |---------- |
-| powerlimiter/status/upper_power_limit        | R  | get currently set maximum power limit of inverter | Power [W] |
-| powerlimiter/cmd/upper_power_limit           | W  | set maximum power limit of inverter               | Power [W] |
-| powerlimiter/status/target_power_consumption | R  | get currently set target grid consumption         | Power [W] |
-| powerlimiter/cmd/target_power_consumption    | W  | set target grid consumption                       | Power [W] |
+| Topic                                         | R / W | Description                                       | Value     |
+| --------------------------------------------- | ----- | ------------------------------------------------- |---------- |
+| `powerlimiter/status/upper_power_limit`       | R     | get currently set maximum power limit of inverter | Power [W] |
+| `powerlimiter/cmd/upper_power_limit`          | W     | set maximum power limit of inverter               | Power [W] |
+| `powerlimiter/status/target_power_consumption`| R     | get currently set target grid consumption         | Power [W] |
+| `powerlimiter/cmd/target_power_consumption`   | W     | set target grid consumption                       | Power [W] |
 
 ### Battery Thresholds
 
@@ -213,15 +213,15 @@ effect. Refer to the [DPL
 documentation](https://github.com/hoylabs/OpenDTU-OnBattery/wiki/Dynamic-Power-Limiter)
 to understand the thresholds.
 
-| Topic                                                              | Limitation |
-| ------------------------------------------------------------------ | ---------- |
-| powerlimiter/status/threshold/voltage/start                        | |
-| powerlimiter/status/threshold/voltage/stop                         | |
-| powerlimiter/status/threshold/voltage/full_solar_passthrough_start | Not published if VE.Direct disabled |
-| powerlimiter/status/threshold/voltage/full_solar_passthrough_stop  | Not published if VE.Direct disabled |
-| powerlimiter/status/threshold/soc/start                            | Not published if no battery interface configured or SoC is set to be ignored |
-| powerlimiter/status/threshold/soc/stop                             | Not published if no battery interface configured or SoC is set to be ignored |
-| powerlimiter/status/threshold/soc/full_solar_passthrough           | Not published if no battery interface configured or SoC is set to be ignored or VE.Direct disabled |
+| Topic                                                                | Limitation |
+| -------------------------------------------------------------------- | ---------- |
+| `powerlimiter/status/threshold/voltage/start`                        | |
+| `powerlimiter/status/threshold/voltage/stop`                         | |
+| `powerlimiter/status/threshold/voltage/full_solar_passthrough_start` | Not published if VE.Direct disabled |
+| `powerlimiter/status/threshold/voltage/full_solar_passthrough_stop`  | Not published if VE.Direct disabled |
+| `powerlimiter/status/threshold/soc/start`                            | Not published if no battery interface configured or SoC is set to be ignored |
+| `powerlimiter/status/threshold/soc/stop`                             | Not published if no battery interface configured or SoC is set to be ignored |
+| `powerlimiter/status/threshold/soc/full_solar_passthrough`           | Not published if no battery interface configured or SoC is set to be ignored or VE.Direct disabled |
 
 All thresholds have respective `cmd` topics (replace `status` with `cmd`),
 which allow to override the threshold. The overrides are persistent, i.e., new
@@ -233,8 +233,8 @@ battery discharge cycle start voltage threshold.
 ### Mode
 | Topic                                   | R / W | Description                                          | Value                      |
 | --------------------------------------- | ----- | ---------------------------------------------------- | -------------------------- |
-| powerlimiter/cmd/mode                   | W     | Power Limiter operation mode                         | see below                  |
-| powerlimiter/status/mode                | R     | Get Power Limiter operation mode                     | see below                  |
+| `powerlimiter/cmd/mode`                 | W     | Power Limiter operation mode                         | see below                  |
+| `powerlimiter/status/mode`              | R     | Get Power Limiter operation mode                     | see below                  |
 
 Setting any a mode through MQTT has *no* effect if the Power Limiter is
 disabled by configuration in the web application. The Power Limiter will stay

@@ -3256,6 +3256,48 @@
 <td></td>
 </tr>
 <tr>
+<td><code>[serial]/radio/tx_request</code></td>
+<td>R</td>
+<td>Amount of sent packet requests</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[serial]/radio/tx_re_request</code></td>
+<td>R</td>
+<td>Amount of sent fragment resend requests</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[serial]/radio/rx_success</code></td>
+<td>R</td>
+<td>Amount of successfull received packets</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[serial]/radio/rx_fail_nothing</code></td>
+<td>R</td>
+<td>Amount of failed packets, nothing was received</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[serial]/radio/rx_fail_partial</code></td>
+<td>R</td>
+<td>Amount of failed packets, some fragments where missing</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[serial]/radio/rx_fail_corrupt</code></td>
+<td>R</td>
+<td>Amount of failed packets, payload corrupt</td>
+<td></td>
+</tr>
+<tr>
+<td><code>[serial]/radio/rssi</code></td>
+<td>R</td>
+<td>RSSI of last received packet (Inverters with NRF24 module only support 2 states. &gt; -64dBm and &lt; -64dBm. In the first case -30 dBm is shown, in the second one -80 dBm)</td>
+<td>dBm</td>
+</tr>
+<tr>
 <td><code>[serial]/status/reachable</code></td>
 <td>R</td>
 <td>Indicates whether the inverter is reachable</td>
@@ -3463,6 +3505,12 @@
 <td>W</td>
 <td>Turn the inverter on (1) or off (0)</td>
 <td>0 or 1</td>
+</tr>
+<tr>
+<td><code>[serial]/cmd/reset_rf_stats</code></td>
+<td>W</td>
+<td>Reset the radio statistics</td>
+<td>1</td>
 </tr>
 <tr>
 <td><code>[serial]/cmd/restart</code></td>

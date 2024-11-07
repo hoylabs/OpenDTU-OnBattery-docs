@@ -57,7 +57,7 @@ and battery peripherals. It is an alternative to Hoymiles Data Transfer Units
 
 * The microcontroller part
     * Build with Arduino PlatformIO Framework for the ESP32
-    * Uses a fork of [ESPAsyncWebserver](https://github.com/yubox-node-org/ESPAsyncWebServer) and [espMqttClient](https://github.com/bertmelis/espMqttClient)
+    * Uses a fork of [ESPAsyncWebserver](https://github.com/mathieucarbou/ESPAsyncWebServer) and [espMqttClient](https://github.com/bertmelis/espMqttClient)
 
 * The WebApp part
     * Build with [Vue.js](https://vuejs.org) and [Bootstrap](https://getbootstrap.com)

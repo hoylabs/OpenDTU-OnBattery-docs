@@ -115,6 +115,10 @@ reading. Choose this value such that it is close to but slightly smaller than
 your household's base load, i.e., the amount of power that is expected to be
 consumed in any case.
 
+In case a power meter is configured, you may set this value to zero if you want
+the DPL to effectively disable all governed inverters once the power meter
+fails.
+
 #### Maximum Power Limit :material-form-textbox:{title="Textbox"}
 
 The inverter limit is set such that its AC output does not exceed this value.

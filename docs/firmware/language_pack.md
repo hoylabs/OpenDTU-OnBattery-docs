@@ -39,6 +39,8 @@ specifier[^2] like `%.1f` to format the respective floating point value:
 
 * `power_w`: Current inverter output power in W
 * `power_kw`: Current inverter output power in kW
+* `meter_power_w`: Current power meter reading in W
+* `meter_power_kw`: Current power meter reading in kW
 * `yield_today_wh`: Inverter daily yield in Wh
 * `yield_today_kwh`: Inverter daily yield in kWh
 * `yield_total_kwh`: Inverter total yield in kWh and one decimal place

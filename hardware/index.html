@@ -473,6 +473,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ready-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ready to Use
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#steps-to-build-your-own-dtu" class="md-nav__link">
     <span class="md-ellipsis">
       Steps to build your own DTU
@@ -654,6 +672,24 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ready-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ready to Use
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parts
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#steps-to-build-your-own-dtu" class="md-nav__link">
@@ -2760,6 +2796,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ready-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ready to Use
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#steps-to-build-your-own-dtu" class="md-nav__link">
     <span class="md-ellipsis">
       Steps to build your own DTU
@@ -2800,6 +2854,13 @@
 
 
 <h1 id="getting-started">Getting Started</h1>
+<h2 id="ready-to-use">Ready to Use</h2>
+<p>If you can afford it and assembling the parts from scratch is not utterly
+important to you, you are encouraged to acquire an <a href="../3rd_party/opendtu_fusion/">OpenDTU
+Fusion</a> board. It integrates both types of RF
+modules together with one of the more powerful supported microcontrollers onto
+a single ready-to-use board.</p>
+<h2 id="parts">Parts</h2>
 <p>OpenDTU-OnBattery supports the ESP32 family of microcontrollers. ESP32-S3
 chips are preferred.</p>
 <div class="admonition note">
@@ -2811,11 +2872,10 @@ flash memory.</p>
 </div>
 <p>Depending on the inverter to be addressed, different RF modules are required.</p>
 <ul>
-<li>The HM series requires the NRF24L01+ module</li>
-<li>The HMS/HMT series requires the CMT2300A module</li>
+<li>The HM series requires the <a href="nrf24l01plus/">NRF24L01+</a> module</li>
+<li>The HMS/HMT series requires the <a href="cmt2300a/">CMT2300A</a> module</li>
 </ul>
 <p>Please see the <a href="inverter_overview/">inverter overview</a> to see if your inverter is supported and to determine the required RF module.</p>
-<p>For an easy start, acquire an <a href="../3rd_party/opendtu_fusion/">OpenDTU Fusion</a> board.</p>
 <h2 id="steps-to-build-your-own-dtu">Steps to build your own DTU</h2>
 <div class="admonition note">
 <p class="admonition-title">Use of GPIOs</p>
@@ -2828,9 +2888,9 @@ matching <a href="../firmware/device_profiles/">device profile</a>.</p>
 <ol>
 <li>Determine the <a href="inverter_overview/">RF module(s)</a> you need.</li>
 <li>Get an <a href="esp32s3_devkit/">ESP32-S3 board</a>.</li>
-<li>Use a power suppy with 5 V and 1 A. The USB cable connected to your
-   PC/Notebook may be powerful enough or may be not. Also the quality of the
-   used USB cable might have an impact.</li>
+<li>Use a power supply with 5 V and 1 A. The USB cable connected to your PC or
+   laptop may or may not provide sufficient power. Also the quality of the USB
+   cable in use might have an impact.</li>
 <li>Wire the ESP32-S3 to the RF module(s).</li>
 <li>Wire a <a href="display/">display</a> (optional).</li>
 <li><a href="../firmware/flash_esp/">Flash the firmware</a> via USB.</li>
@@ -2860,7 +2920,7 @@ matching <a href="../firmware/device_profiles/">device profile</a>.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 9, 2024 21:05:54</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 20, 2024 20:10:28</span>
   </span>
 
     

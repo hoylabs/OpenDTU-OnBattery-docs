@@ -1,5 +1,15 @@
 # Getting Started
 
+## Ready to Use
+
+If you can afford it and assembling the parts from scratch is not utterly
+important to you, you are encouraged to acquire an [OpenDTU
+Fusion](../3rd_party/opendtu_fusion.md) board. It integrates both types of RF
+modules together with one of the more powerful supported microcontrollers onto
+a single ready-to-use board.
+
+## Parts
+
 OpenDTU-OnBattery supports the ESP32 family of microcontrollers. ESP32-S3
 chips are preferred.
 
@@ -11,12 +21,10 @@ chips are preferred.
 
 Depending on the inverter to be addressed, different RF modules are required.
 
-- The HM series requires the NRF24L01+ module
-- The HMS/HMT series requires the CMT2300A module
+- The HM series requires the [NRF24L01+](nrf24l01plus.md) module
+- The HMS/HMT series requires the [CMT2300A](cmt2300a.md) module
 
 Please see the [inverter overview](inverter_overview.md) to see if your inverter is supported and to determine the required RF module.
-
-For an easy start, acquire an [OpenDTU Fusion](../3rd_party/opendtu_fusion.md) board.
 
 ## Steps to build your own DTU
 
@@ -29,9 +37,9 @@ For an easy start, acquire an [OpenDTU Fusion](../3rd_party/opendtu_fusion.md) b
 
 1. Determine the [RF module(s)](inverter_overview.md) you need.
 2. Get an [ESP32-S3 board](esp32s3_devkit.md).
-3. Use a power suppy with 5 V and 1 A. The USB cable connected to your
-   PC/Notebook may be powerful enough or may be not. Also the quality of the
-   used USB cable might have an impact.
+3. Use a power supply with 5 V and 1 A. The USB cable connected to your PC or
+   laptop may or may not provide sufficient power. Also the quality of the USB
+   cable in use might have an impact.
 4. Wire the ESP32-S3 to the RF module(s).
 5. Wire a [display](display.md) (optional).
 6. [Flash the firmware](../firmware/flash_esp.md) via USB.

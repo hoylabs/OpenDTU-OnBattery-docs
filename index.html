@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.35">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.0253249f.min.css">
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
@@ -2284,6 +2284,27 @@
   
   
     <li class="md-nav__item">
+      <a href="firmware/language_pack/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Language Packs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="firmware/mqtt_topics/" class="md-nav__link">
         
   
@@ -2336,10 +2357,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
         
           
-          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2350,8 +2371,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
             <span class="md-nav__icon md-icon"></span>
             Howtos
           </label>
@@ -2466,10 +2487,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
         
           
-          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2480,8 +2501,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_11">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
             <span class="md-nav__icon md-icon"></span>
             Development
           </label>
@@ -2880,16 +2901,16 @@ behavior!</p>
 </div>
 <h2 id="key-features">Key Features</h2>
 <ul>
-<li>Dynamic Power Limiter to adjust one inverter's limit dynamically</li>
+<li>Dynamic Power Limiter to adjust inverter limits dynamically</li>
 <li>Power Meter interface to read the household power consumption</li>
 <li>Victron VE.Direct interface to communicate with Victron charge controllers</li>
-<li>Battery interface (JK BMS, Pylontech, Victron SmartShunt) to know a battery's state</li>
+<li>Battery interface (JK BMS, Pylontech, Victron SmartShunt, and more) to know a battery's state</li>
 <li>AC charger interface to control a Huawei AC charger</li>
 </ul>
 <h2 id="key-features-inherited-from-the-upstream-project">Key Features inherited from the upstream project</h2>
 <ul>
 <li>Read live data from inverter</li>
-<li>Show inverters internal event log</li>
+<li>Show inverter's internal event log</li>
 <li>Show inverter information like firmware version, firmware build date, hardware revision and hardware version</li>
 <li>Show and set the current inverter limit</li>
 <li>Show the current grid profile settings</li>
@@ -2898,13 +2919,13 @@ behavior!</p>
 <li>MQTT support (with TLS)</li>
 <li>Home Assistant MQTT Auto Discovery support</li>
 <li>Nice and fancy WebApp with visualization of current data</li>
-<li>Firmware upgrade using the web UI</li>
+<li>Firmware upgrade using the web UI<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></li>
 <li>Time zone support</li>
 <li>Ethernet support</li>
 <li><a href="3rd_party/prometheus_database/">Prometheus API endpoint</a> (/api/prometheus/metrics)</li>
-<li>English, German and French (partially translated) web interface</li>
-<li>Displays (SSD1306, SH1106, PCD8544)</li>
-<li>Status LEDs</li>
+<li>English, German and French (partially translated) web interface (additional languages can be installed by uploading a <a href="firmware/language_pack/">language pack</a>)</li>
+<li>Support for displays (SSD1306, SH1106, PCD8544)</li>
+<li>Support for status LEDs</li>
 <li>Configuration management (export / import configurations)</li>
 <li>Dark Theme</li>
 </ul>
@@ -2914,7 +2935,7 @@ behavior!</p>
 <p>The microcontroller part</p>
 <ul>
 <li>Build with Arduino PlatformIO Framework for the ESP32</li>
-<li>Uses a fork of <a href="https://github.com/yubox-node-org/ESPAsyncWebServer">ESPAsyncWebserver</a> and <a href="https://github.com/bertmelis/espMqttClient">espMqttClient</a></li>
+<li>Uses a fork of <a href="https://github.com/mathieucarbou/ESPAsyncWebServer">ESPAsyncWebserver</a> and <a href="https://github.com/bertmelis/espMqttClient">espMqttClient</a></li>
 </ul>
 </li>
 <li>
@@ -2938,6 +2959,14 @@ It's goal was to replace the original Hoymiles DTU (Telemetry Gateway), which up
 donation. This will help with offsetting the cost of hardware bought to develop
 and test features, or offsetting recurring costs like domain registrations.</p>
 <p><a href="https://ko-fi.com/schlimmchen" target="_blank"><img alt="Donate" src="https://img.shields.io/badge/Ko--fi-donate-5e8bde?style=for-the-badge&amp;logo=kofi&amp;logoColor=5e8bde" /></a></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Firmware over-the-air (OTA) updates are <strong>not</strong> supported on ESP32 with only 4MB of flash memory.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -2960,7 +2989,7 @@ and test features, or offsetting recurring costs like domain registrations.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 15, 2024 21:02:11</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 20, 2024 19:42:26</span>
   </span>
 
     
@@ -3049,7 +3078,7 @@ and test features, or offsetting recurring costs like domain registrations.</p>
     <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "toc.follow", "navigation.path", "search.suggest", "content.tooltips", "content.action.edit", "content.action.view"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       

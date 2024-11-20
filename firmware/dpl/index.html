@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.35">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -1333,9 +1333,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#inverter" class="md-nav__link">
+  <a href="#inverters" class="md-nav__link">
     <span class="md-ellipsis">
-      Inverter
+      Inverters
     </span>
   </a>
   
@@ -1387,6 +1387,15 @@
   <a href="#full-solar-passthrough" class="md-nav__link">
     <span class="md-ellipsis">
       (Full) Solar-Passthrough
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategy
     </span>
   </a>
   
@@ -2302,6 +2311,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../language_pack/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Language Packs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../mqtt_topics/" class="md-nav__link">
         
   
@@ -2354,10 +2384,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
         
           
-          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2368,8 +2398,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
             <span class="md-nav__icon md-icon"></span>
             Howtos
           </label>
@@ -2484,10 +2514,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
         
           
-          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2498,8 +2528,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_11">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
             <span class="md-nav__icon md-icon"></span>
             Development
           </label>
@@ -2791,9 +2821,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#inverter" class="md-nav__link">
+  <a href="#inverters" class="md-nav__link">
     <span class="md-ellipsis">
-      Inverter
+      Inverters
     </span>
   </a>
   
@@ -2850,6 +2880,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategy
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2888,40 +2927,39 @@
 
 <h1 id="introduction">Introduction</h1>
 <p>The dynamic power limiter (DPL) is a software feature allowing automatic
-inverter power limit adjustments. Depending on the serup, the DPL will take the
+inverter power limit adjustments. Depending on the setup, the DPL will take the
 power meter (i.e. currently consumed power), the available solar power, and the
-battery charge state into account. The inverter is steered such that the
-currently consumed power (as provided by the power meter) reaches a
+battery charge state into account. Selected inverters are governed such that
+the currently consumed power (as provided by the power meter) reaches a
 user-defined value (usually zero). In particular, this allows to implement a
-zero export setup.</p>
+zero-export setup.</p>
 <div class="admonition note">
 <p class="admonition-title">Systems without battery</p>
-<p>The DPL also works in systems that do not have a battery, i.e., where the
-inverter is powered by solar panels directly.
+<p>The DPL also works in systems that do not have a battery, i.e., where
+selected inverters are powered by solar panels directly.
 <a href="../configuration/dpl/">Configure</a> the DPL accordingly. Battery-related
 features and settings do not apply for these setups.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Systems without a power meter</p>
 <p>Setups without access to a power meter reading are supported. However, this
-implies that the inverter will never produce more than the configured base
-load.</p>
+implies that the selected inverters will never produce more than the
+configured base load.</p>
 </div>
 <p>Refer to the documentation on <a href="../configuration/dpl/">DPL parameters</a> to learn
 how to configure the DPL.</p>
 <h2 id="terminology-and-basics">Terminology and Basics</h2>
 <div class="admonition warning">
 <p class="admonition-title">Best Effort</p>
-<p>The DPL can be slow (&gt;10 seconds) to calculate and send a new power limit.
+<p>The DPL can be slow (&gt;10 seconds) to calculate and send new power limits.
 With tuning, the limit updates can be as frequent as one or two seconds.
 There will always be a delay. The DPL <strong>cannot</strong> be expected to react in
-"realtime" similar to a commercial inline battery/inverter combination.</p>
+"real-time" similar to a commercial inline battery/inverter combination.</p>
 </div>
-<h3 id="inverter">Inverter</h3>
-<p>The DPL is currently capable of controlling a single inverter only.</p>
-<p>It is expected that the DPL is in exclusive control over the inverter. No other
-software and no human interaction shall trigger limit updates to be sent to the
-inverter.</p>
+<h3 id="inverters">Inverters</h3>
+<p>It is expected that the DPL is in exclusive control over the inverters selected
+to be governed by the DPL. No other software and no human interaction shall
+trigger limit updates to be sent to the selected inverters.</p>
 <h3 id="battery-cycles">Battery Cycles</h3>
 <div class="admonition note">
 <p class="admonition-title">Reboot State</p>
@@ -2938,24 +2976,77 @@ cycle ends when the battery SoC or voltage reaches the respective stop
 threshold.</p>
 <h3 id="voltage-measurements">Voltage Measurements</h3>
 <p>If the DPL is configured such that voltage thresholds (rather than SoC
-thresholds) are effective, the voltage reading is taken from any of the
+thresholds) are effective, or when the battery interface fails to provide
+recent SoC values, the battery's voltage reading is taken from any of the
 following sources, in the given order:</p>
 <ol>
-<li><a href="../battery_interface/">Battery interface</a></li>
+<li><a href="../battery_interface/">Battery interface</a>, i.e., the BMS</li>
 <li><a href="../../hardware/victron_charge_controllers/">Victron charge controller</a>
    battery output terminal</li>
 <li>Selected inverter input (configurable)</li>
 </ol>
 <p>If available, the battery interface voltage reading is preferred, as it is
 closest to the actual battery and therefore to be expected to be the most
-accurate. Without a battery interface and if available, the victron charge
+accurate. Without a battery interface and if available, the Victron charge
 controller output voltage is preferred, as it also is often closer to the
-battery as well as more accurate. As a fallback, the inverter's input voltage
+battery and more accurate. As a fallback, the inverter's input voltage
 reading is assumed as the battery voltage.</p>
 <h3 id="full-solar-passthrough">(Full) Solar-Passthrough</h3>
 <p>If the currently available solar power is known, the DPL can make additional
 decisions on how to calculate the inverter limits. See the documentation on
 <a href="../solar_passthrough/">(Full) Solar-Passthrough</a>.</p>
+<p><strong>Full</strong> Solar-Passthrough is implemented separately from the strategy outlined
+below: All solar-powered inverters are set to 100% output power and the
+battery-powered inverters are then configured to match the reported solar
+output power.</p>
+<h3 id="strategy">Strategy</h3>
+<ol>
+<li>The DPL calculates the desired total inverter output based on the power
+   meter reading, the inverters' current output (if
+   <a href="../configuration/dpl/#power-meter-reading-includes-inverter-output">configured</a>),
+   and the <a href="../configuration/dpl/#target-grid-consumption">target grid
+   consumption</a> value. If no
+   power meter reading is available, the configured <a href="../configuration/dpl/#base-load">base
+   load</a> is used.</li>
+<li>The calculated desired total inverter output is confined by the configured
+   <a href="../configuration/dpl/#maximum-total-output">maximum total output</a>.</li>
+<li>Solar-powered inverters, if any, are set up with limits such that the desired
+   total inverter output is matched as closely as possible.</li>
+<li>The expected output of all solar-powered inverters after their new update
+   is applied is subtracted from the desired total inverter output.</li>
+<li>An allowance of DC power is calculated that the battery-powered inverters
+   may consume. The following is a possibly incomplete list of typical
+   scenarios:<ul>
+<li>The battery charge may be below the <a href="../configuration/dpl/#stop-threshold-for-battery-discharging">stop
+  threshold</a>
+  and no solar power is available, so the allowance is zero.</li>
+<li>Even if the battery is empty, there might be solar power and if
+  <a href="../solar_passthrough/">Solar-Passthrough</a> is enabled, the allowance is
+  equal to the solar output (adjusted for cable losses).</li>
+<li>The battery may be charged beyond the <a href="../configuration/dpl/#start-threshold-for-battery-discharging">start
+  threshold</a>,
+  so the allowance is effectively infinite.</li>
+<li>Even if the battery is fully charged, the battery discharge limit can
+  reduce the allowance accordingly.</li>
+</ul>
+</li>
+<li>The remaining desired total inverter output is confined by the battery
+   allowance.</li>
+<li>Battery-powered inverters, if any, are set up with limits such that the
+   remaining desired total inverter output is matched as closely as possible.</li>
+</ol>
+<p>Choosing new limits for the inverters is based on the difference between the
+current inverters' output of a particular group (solar-powered and
+battery-powered inverters) and the desired output for that group. The DPL
+adjusts the output of individual inverters to match the desired output. It
+adjusts multiple inverters if the change cannot be covered by a single
+inverter.</p>
+<p>The DPL currently prefers inverters to be producing and only shuts down an
+inverter when necessary to achieve a particular reduction.</p>
+<p>Eligible inverters of a group are sorted in descending order of the amount they
+can add to a particular increase or reduction of output power. This reduces the
+number of inverters that need to receive an update to implement the change in
+output power and hence increases the DPL's responsiveness.</p>
 
 
 
@@ -2978,7 +3069,7 @@ decisions on how to calculate the inverter limits. See the documentation on
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2024 20:50:30</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 19, 2024 22:12:00</span>
   </span>
 
     
@@ -3067,7 +3158,7 @@ decisions on how to calculate the inverter limits. See the documentation on
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "toc.follow", "navigation.path", "search.suggest", "content.tooltips", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       

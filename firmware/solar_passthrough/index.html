@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.35">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -2269,6 +2269,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../language_pack/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Language Packs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../mqtt_topics/" class="md-nav__link">
         
   
@@ -2321,10 +2342,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
         
           
-          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2335,8 +2356,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
             <span class="md-nav__icon md-icon"></span>
             Howtos
           </label>
@@ -2451,10 +2472,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
         
           
-          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2465,8 +2486,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_11">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
             <span class="md-nav__icon md-icon"></span>
             Development
           </label>
@@ -2821,20 +2842,26 @@
 
 
 <h1 id="full-solar-passthrough">(Full) Solar-Passthrough</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This feature only applies to systems with battery-powered inverters and is
+currently additionally limited to systems using a connected Victron charge
+controller reporting the solar output.</p>
+</div>
 <h2 id="solar-passthrough">Solar-Passthrough</h2>
 <p>Solar-Passthrough is a feature that, if enabled, makes the <a href="../dpl/">DPL</a>
-calculate an inverter limit such that the available solar power is first used
+calculate the inverter limits such that the available solar power is first used
 to cover the needs of the household. This effectively prevents the energy from
 being stored in the battery just so it can be discharged later. If there is any
 surplus solar power left, it will be used to charge the battery.</p>
-<p>Refer to the <a href="../dpl/">DPL documentation</a> to understand what is considired a
+<p>Refer to the <a href="../dpl/">DPL documentation</a> to understand what is considered a
 battery charge and discharge cycle.</p>
 <h3 id="solar-passthrough-is-off">Solar-Passthrough is OFF</h3>
 <ul>
-<li>The inverter is disabled during a battery charge cycle.</li>
+<li>The inverters are disabled during a battery charge cycle.</li>
 <li>All solar power will be used to charge the battery.</li>
-<li>The inverter is enabled during a battery discharge cycle.<ul>
-<li>The inverter will use as much power as is needed to compensate the
+<li>The inverters are enabled as needed during a battery discharge cycle.<ul>
+<li>The inverters will use as much power as is needed to compensate the
   household consumption.</li>
 <li>Depending on the current consumption and the available solar power, the
   battery is drained.</li>
@@ -2842,17 +2869,18 @@ battery charge and discharge cycle.</p>
 </li>
 </ul>
 <h3 id="solar-passthrough-is-on">Solar-Passthrough is ON</h3>
-<p>As with Solar-Passthrough OFF, in general the inverter is disabled during a
-battery charge cycle, and it is enabled during a battery discharge cycle.</p>
+<p>As with Solar-Passthrough OFF, in general the inverters are disabled during a
+battery charge cycle, and they are enabled as needed during a battery discharge
+cycle.</p>
 <p>With Solar-Passthrough ON, there is an important difference while the battery
 is in a charge cycle:</p>
 <ul>
-<li>If there is solar power available (Victron MPPT is producing power), it will
-  be used to cover the household consumption.<ul>
-<li>The inverter is thus enabled and producing power even though the battery is
-  in a charge cycle.</li>
-<li>The inverter power limit is <strong>constrained to the solar power</strong>. Therefore,
-  discharging of the battery is avoided.</li>
+<li>If there is solar power available (Victron charge controller is producing
+  power), it will be used to cover the household consumption.<ul>
+<li>The inverters are thus enabled as needed and producing power even though
+  the battery is in a charge cycle.</li>
+<li>The inverters' total power limit is <strong>constrained to the solar power</strong>.
+  Therefore, discharging of the battery is avoided.</li>
 </ul>
 </li>
 <li>Surplus solar power (available when solar output is greater than the
@@ -2862,17 +2890,17 @@ is in a charge cycle:</p>
 <p>There is an additional battery SoC/voltage threshold activating <strong>Full</strong>
 Solar-Passthrough.</p>
 <p>While the battery reached or is above the <strong>Full</strong> Solar-Passthrough threshold,
-the inverter's limit is set to match the total solar power output (regardless
+the inverters' limits are set to match the total solar power output (regardless
 of the power meter value). This threshold is usually configured such that Full
 Solar-Passthrough activates when the battery is considered fully charged.
 Surplus solar power is then fed into the grid.</p>
 <div class="admonition note">
 <p class="admonition-title">Limitation</p>
-<p>If the solar output power is greater than the inverter can feed into the
-grid, the charge controller will eventually switch to absorbtion and then
-float mode. This reduces the charge controller's power output, and the
-inverter follows the new output power, and the production of AC power
-seizes.</p>
+<p>If the solar output power is greater than the inverters can feed or are
+allowed to feed into the grid, the charge controller will eventually switch
+to absorption and then to float mode. This reduces the charge controller's
+power output, and the inverters follow the new output power, and the
+production of AC power ceases.</p>
 </div>
 
 
@@ -2896,7 +2924,7 @@ seizes.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2024 20:50:30</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 19, 2024 21:28:01</span>
   </span>
 
     
@@ -2985,7 +3013,7 @@ seizes.</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "toc.follow", "navigation.path", "search.suggest", "content.tooltips", "content.action.edit", "content.action.view"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
         <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
       

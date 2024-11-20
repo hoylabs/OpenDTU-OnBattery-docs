@@ -28,13 +28,13 @@ and battery peripherals. It is an alternative to Hoymiles Data Transfer Units
 * Dynamic Power Limiter to adjust inverter limits dynamically
 * Power Meter interface to read the household power consumption
 * Victron VE.Direct interface to communicate with Victron charge controllers
-* Battery interface (JK BMS, Pylontech, Victron SmartShunt) to know a battery's state
+* Battery interface (JK BMS, Pylontech, Victron SmartShunt, and more) to know a battery's state
 * AC charger interface to control a Huawei AC charger
 
 ## Key Features inherited from the upstream project
 
 * Read live data from inverter
-* Show inverters internal event log
+* Show inverter's internal event log
 * Show inverter information like firmware version, firmware build date, hardware revision and hardware version
 * Show and set the current inverter limit
 * Show the current grid profile settings
@@ -43,13 +43,13 @@ and battery peripherals. It is an alternative to Hoymiles Data Transfer Units
 * MQTT support (with TLS)
 * Home Assistant MQTT Auto Discovery support
 * Nice and fancy WebApp with visualization of current data
-* Firmware upgrade using the web UI
+* Firmware upgrade using the web UI[^1]
 * Time zone support
 * Ethernet support
 * [Prometheus API endpoint](3rd_party/prometheus_database.md) (/api/prometheus/metrics)
 * English, German and French (partially translated) web interface (additional languages can be installed by uploading a [language pack](firmware/language_pack.md))
-* Displays (SSD1306, SH1106, PCD8544)
-* Status LEDs
+* Support for displays (SSD1306, SH1106, PCD8544)
+* Support for status LEDs
 * Configuration management (export / import configurations)
 * Dark Theme
 
@@ -89,3 +89,4 @@ and test features, or offsetting recurring costs like domain registrations.
 [2]: https://www.github.com/hoylabs/OpenDTU-OnBattery/discussions
 [3]: https://discord.gg/WzhxEY62mB
 [4]: https://github.com/tbnobody/OpenDTU
+[^1]: Firmware over-the-air (OTA) updates are **not** supported on ESP32 with only 4MB of flash memory.

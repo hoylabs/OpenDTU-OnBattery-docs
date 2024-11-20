@@ -25,7 +25,7 @@ and battery peripherals. It is an alternative to Hoymiles Data Transfer Units
 
 ## Key Features
 
-* Dynamic Power Limiter to adjust one inverter's limit dynamically
+* Dynamic Power Limiter to adjust inverter limits dynamically
 * Power Meter interface to read the household power consumption
 * Victron VE.Direct interface to communicate with Victron charge controllers
 * Battery interface (JK BMS, Pylontech, Victron SmartShunt) to know a battery's state

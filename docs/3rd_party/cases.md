@@ -4,6 +4,7 @@
 
 * [OpenDTU Fusion PCB + POE HAT](https://www.thingiverse.com/thing:6371201){target=_blank}
 * [OpenDTU Fusion PCB with 1,54" OLED display](https://www.printables.com/de/model/700045-case-for-opendtu-fusion-pcb-with-154-oled-display){target=_blank}
+* [OpenDTU Fusion PCB DinRail with 1,3"/1,54" OLED/without display/with ISO mount](https://www.thingiverse.com/thing:6839520){target=_blank}
 
 ## ESP32-S3
 

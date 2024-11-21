@@ -1,11 +1,16 @@
 # Community WebFlasher
 
+!!!danger
+    Very unfortunately, the Community WebFlasher currently has a maintenance
+    issue. Consider it deprecated for ESP32 (non-S3), as it is unable to select
+    the correct firmware binary blob for ESP32 chips.
+
 Use the [Community WebFlasher](https://solar.metacontrol.eu/opendtu-onbattery-webflasher/)
 to install OpenDTU-OnBattery on your ESP32 or ESP32-S3 board with a
 user-defined release version of the pre-built firmware binaries (sourced from
 the project's GitHub [Releases Page](https://github.com/hoylabs/OpenDTU-OnBattery/releases)).
 
-The WebFlasher is platform-independent, but requires the Chrome or Edge browser.
+The WebFlasher is platform-independent, but requires the Chrome, Brave, or Edge browser.
 
 ## Troubleshooting
 

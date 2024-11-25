@@ -4104,20 +4104,20 @@ reset to <em>normal operation</em>.</p>
   afterwards the Power Limiter stops operating, as if it was disabled in the
   web application. Note that this means that the inverter can start producing
   power if the web application or an MQTT topic is used to control it.</li>
-<li><strong>2</strong> - Unconditional Full Solar-Passthrough: The power limit is set such
+<li><strong>2</strong> - Unconditional Full Solar-Passthrough: The power limits are set such
   that all available solar power is fed into the home, irrespective of grid
-  consumption. Essentially, the inverter mimics the behavior of a traditional,
-  non-smart inverter. Depending on your configuration, the inverter's limit is
-  set to the following:<ol>
-<li><strong>Inverter is powered by a battery</strong>: The inverter's limit is set to the
-   solar power output (VE.Direct interface), adjusted for efficiency, such
-   that no energy from the battery is consumed. Note that if VE.Direct is
-   disabled or the data is outdated, the inverter is shut down instead. This
-   mode can be particularly useful in scenarios where solar power is better
-   stored elsewhere, such as in an electric car.</li>
-<li><strong>Inverter is powered by solar modules</strong>: The inverter's limit is set to
-   the upper limit configured in the DPL settings (starting from release
-   2024.05.03).</li>
+  consumption. Essentially, the inverters mimic the behavior of traditional,
+  non-smart inverters. Depending on your configuration, the inverters' limits
+  are set to the following:<ol>
+<li><strong>Battery-powered inverters</strong>: The inverters' limits are set to match
+   the solar power output (VE.Direct interface), adjusted for efficiency,
+   such that no energy from the battery is consumed. Note that if VE.Direct
+   is disabled or the data is outdated, the inverters are shut down
+   instead. This mode can be particularly useful in scenarios where solar
+   power is better stored elsewhere, such as in an electric car.</li>
+<li><strong>Solar-powered inverters</strong>: The inverters' limits are set to the
+   respective upper limit configured in the DPL settings (starting from
+   release 2024.05.03).</li>
 </ol>
 </li>
 </ul>
@@ -4126,7 +4126,7 @@ reset to <em>normal operation</em>.</p>
 <p class="admonition-title">Availability</p>
 <p>Starting from release 2024.05.03.</p>
 </div>
-<p>The DPL counts the amount of times an attempt to configure the inverter to a
+<p>The DPL counts the amount of times an attempt to configure an inverter to a
 particular state times out. This counter is used to decide to sent an inverter
 restart command, hoping to "revive" the inverter. If the counter keeps
 increasing even after multiple restart commands have been issued, the ESP
@@ -4156,7 +4156,7 @@ alerted by these timeouts.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 29, 2024 16:26:05</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 25, 2024 21:42:28</span>
   </span>
 
     

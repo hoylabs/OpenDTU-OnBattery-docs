@@ -251,27 +251,27 @@ Three modes are implemented:
   afterwards the Power Limiter stops operating, as if it was disabled in the
   web application. Note that this means that the inverter can start producing
   power if the web application or an MQTT topic is used to control it.
-* **2** - Unconditional Full Solar-Passthrough: The power limit is set such
+* **2** - Unconditional Full Solar-Passthrough: The power limits are set such
   that all available solar power is fed into the home, irrespective of grid
-  consumption. Essentially, the inverter mimics the behavior of a traditional,
-  non-smart inverter. Depending on your configuration, the inverter's limit is
-  set to the following:
-    1. **Inverter is powered by a battery**: The inverter's limit is set to the
-       solar power output (VE.Direct interface), adjusted for efficiency, such
-       that no energy from the battery is consumed. Note that if VE.Direct is
-       disabled or the data is outdated, the inverter is shut down instead. This
-       mode can be particularly useful in scenarios where solar power is better
-       stored elsewhere, such as in an electric car.
-    2. **Inverter is powered by solar modules**: The inverter's limit is set to
-       the upper limit configured in the DPL settings (starting from release
-       2024.05.03).
+  consumption. Essentially, the inverters mimic the behavior of traditional,
+  non-smart inverters. Depending on your configuration, the inverters' limits
+  are set to the following:
+    1. **Battery-powered inverters**: The inverters' limits are set to match
+       the solar power output (VE.Direct interface), adjusted for efficiency,
+       such that no energy from the battery is consumed. Note that if VE.Direct
+       is disabled or the data is outdated, the inverters are shut down
+       instead. This mode can be particularly useful in scenarios where solar
+       power is better stored elsewhere, such as in an electric car.
+    2. **Solar-powered inverters**: The inverters' limits are set to the
+       respective upper limit configured in the DPL settings (starting from
+       release 2024.05.03).
 
 ### Timeout Counter
 
 !!!note "Availability"
     Starting from release 2024.05.03.
 
-The DPL counts the amount of times an attempt to configure the inverter to a
+The DPL counts the amount of times an attempt to configure an inverter to a
 particular state times out. This counter is used to decide to sent an inverter
 restart command, hoping to "revive" the inverter. If the counter keeps
 increasing even after multiple restart commands have been issued, the ESP

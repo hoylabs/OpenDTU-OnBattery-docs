@@ -99,6 +99,7 @@ markdown_extensions:
 nav:
   - Home:
       - Introduction: index.md
+      - Safety: safety.md
       - Hardware Support: hardware/index.md
       - Firmware Installation: firmware/index.md
       - Troubleshooting: troubleshooting.md

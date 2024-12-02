@@ -3529,6 +3529,19 @@ the battery charge cycle did not complete.</p>
 threshold, i.e., a value that translates to the battery being nearly full.
 Doing so will prevent battery discharging during the day, but will also prevent
 discharging during the night if the start threshold was not reached.</p>
+<div class="admonition note">
+<p class="admonition-title">Efficiency</p>
+<p>With Solar-Passthrough disabled, it is more efficient to chose a low
+start threshold and to disable this option, such that produced energy is
+used immediately rather than stored in the battery first.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Ending Nighttime Discharging</p>
+<p>Discharging the battery always ends when reaching the stop threshold. If a
+discharge cycle was previously started because of this option being enabled,
+discharging also ends roughly at sunrise, even if the battery still stores
+a significant amount of energy.</p>
+</div>
 <h4 id="inverter-used-for-voltage-measurement">Inverter Used For Voltage Measurement <span class="twemoji" title="Dropdown"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 5h3l-1.5 2zM3 2h18a2 2 0 0 1 2 2v4c0 1.11-.89 2-2 2h-5v10c0 1.11-.89 2-2 2H3a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2m0 2v4h11V4zm18 4V4h-5v4zM3 20h11V10H3zm2-8h7v2H5zm0 4h7v2H5z"/></svg></span></h4>
 <p>The battery voltage is read from one input of the selected inverter if no other
 source is available to read the battery voltage.</p>
@@ -3677,7 +3690,7 @@ when the battery is neither full nor empty.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 17, 2024 22:07:09</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 2, 2024 18:02:05</span>
   </span>
 
     

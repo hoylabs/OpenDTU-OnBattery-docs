@@ -147,6 +147,17 @@ threshold, i.e., a value that translates to the battery being nearly full.
 Doing so will prevent battery discharging during the day, but will also prevent
 discharging during the night if the start threshold was not reached.
 
+!!!note "Efficiency"
+    With Solar-Passthrough disabled, it is more efficient to chose a low
+    start threshold and to disable this option, such that produced energy is
+    used immediately rather than stored in the battery first.
+
+!!! note "Ending Nighttime Discharging"
+    Discharging the battery always ends when reaching the stop threshold. If a
+    discharge cycle was previously started because of this option being enabled,
+    discharging also ends roughly at sunrise, even if the battery still stores
+    a significant amount of energy.
+
 #### Inverter Used For Voltage Measurement :material-form-dropdown:{title="Dropdown"}
 
 The battery voltage is read from one input of the selected inverter if no other

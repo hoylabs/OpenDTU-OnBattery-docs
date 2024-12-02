@@ -24,7 +24,7 @@ Take precautions to prevent injury or damages, like using insulated tools to
 prevent shocks or short circuits.
 
 For starters, you may want to consult the extensive guide "Wiring Unlimited" by
-Victron in [English](WiringEn) or [German](WiringDe), which covers the topic of
+Victron in [English][WiringEn] or [German][WiringDe], which covers the topic of
 wiring in systems with batteries, charge controllers, and inverters.
 
 [WiringEn]: https://www.victronenergy.de/upload/documents/The_Wiring_Unlimited_book/43562-Wiring_Unlimited-pdf-en.pdf

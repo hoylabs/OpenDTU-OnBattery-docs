@@ -46,13 +46,38 @@ trigger limit updates to be sent to the selected inverters.
 
 A battery charge cycle is started when the battery SoC or voltage falls below
 the respective stop threshold. The charge cycle completes when the battery SoC
-or voltage reaches the respective start threshold.
+or voltage reaches the respective start threshold. While in a charge cycle, the
+DPL will not drain the battery.
 
 #### Discharge Cycle
 
 The battery is or was charged to or beyond the start threshold. The discharge
 cycle ends when the battery SoC or voltage reaches the respective stop
-threshold.
+threshold. While in a discharge cycle, the DPL drains the battery to match the
+household consumption.
+
+#### Timing
+
+Please be aware that the charge and discharge cycles are not related to a
+specific time of day, or any time at all. Often, a system is designed such that
+the battery is empty in the morning, charged during the day, and discharged
+during the night. However, that is merely a result of the system parameters
+(solar power installed, battery capacity, inverter output power) and the
+settings, and not tied to a time of day through software.
+
+!!!note "Example"
+    Once a discharge cycle starts on day `n`, the discharge cycle can last to
+    day `n+y`, if the solar output was high during those days and the battery
+    was able to support the household consumption through all nights.
+
+!!!note "Exception"
+    The switch [allowing to start a discharge cycle][useatnight] at sunset
+    causes switching to a battery discharge cycle when a specific time point,
+    i.e., sunset, is reached. It also causes that the discharge cycle ends at
+    sunrise, if it was started because of this feature, and if it did not end
+    because of the stop threshold during the night anyways.
+
+[useatnight]: configuration/dpl.md#use-battery-at-night-even-if-only-partially-charged
 
 ### Voltage Measurements
 

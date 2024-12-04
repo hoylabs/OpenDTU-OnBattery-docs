@@ -1390,6 +1390,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#timing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timing
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2878,6 +2887,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#timing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timing
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2990,11 +3008,34 @@ SoC or voltage is found to be above the respective start threshold.</p>
 <h4 id="charge-cycle">Charge Cycle</h4>
 <p>A battery charge cycle is started when the battery SoC or voltage falls below
 the respective stop threshold. The charge cycle completes when the battery SoC
-or voltage reaches the respective start threshold.</p>
+or voltage reaches the respective start threshold. While in a charge cycle, the
+DPL will not drain the battery.</p>
 <h4 id="discharge-cycle">Discharge Cycle</h4>
 <p>The battery is or was charged to or beyond the start threshold. The discharge
 cycle ends when the battery SoC or voltage reaches the respective stop
-threshold.</p>
+threshold. While in a discharge cycle, the DPL drains the battery to match the
+household consumption.</p>
+<h4 id="timing">Timing</h4>
+<p>Please be aware that the charge and discharge cycles are not related to a
+specific time of day, or any time at all. Often, a system is designed such that
+the battery is empty in the morning, charged during the day, and discharged
+during the night. However, that is merely a result of the system parameters
+(solar power installed, battery capacity, inverter output power) and the
+settings, and not tied to a time of day through software.</p>
+<div class="admonition note">
+<p class="admonition-title">Example</p>
+<p>Once a discharge cycle starts on day <code>n</code>, the discharge cycle can last to
+day <code>n+y</code>, if the solar output was high during those days and the battery
+was able to support the household consumption through all nights.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Exception</p>
+<p>The switch <a href="../configuration/dpl/#use-battery-at-night-even-if-only-partially-charged">allowing to start a discharge cycle</a> at sunset
+causes switching to a battery discharge cycle when a specific time point,
+i.e., sunset, is reached. It also causes that the discharge cycle ends at
+sunrise, if it was started because of this feature, and if it did not end
+because of the stop threshold during the night anyways.</p>
+</div>
 <h3 id="voltage-measurements">Voltage Measurements</h3>
 <p>If the DPL is configured such that voltage thresholds (rather than SoC
 thresholds) are effective, or when the battery interface fails to provide
@@ -3090,7 +3131,7 @@ output power and hence increases the DPL's responsiveness.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 19, 2024 22:12:00</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 4, 2024 22:36:37</span>
   </span>
 
     

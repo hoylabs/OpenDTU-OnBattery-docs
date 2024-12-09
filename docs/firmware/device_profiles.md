@@ -200,7 +200,7 @@ assumed that you know what you are doing.
         },
         "victron": {
             "rx": 22,
-            "tx": -1,
+            "tx": -1
         },
         "powermeter": {
             "rx": 16,

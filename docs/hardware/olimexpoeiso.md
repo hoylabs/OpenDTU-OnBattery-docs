@@ -16,8 +16,20 @@ To use this board please refer to the [Device Profile](../firmware/device_profil
 
 ## Schematic
 
+!!!info "Example"
+    This is merely an example. You may need a different [RF
+    module](inverter_overview.md) to support your inverter. The display is
+    optional. You may wire the components to other GPIOs, if you
+    upload a matching [Device Profile](../firmware/device_profiles.md).
+
 ![Schematic](../assets/images/hardware/Wiring_OlimexPoeIso_NRF24_Schematic.png)
 
 ## Symbolic View
+
+!!!info "Example"
+    This is merely an example. You may need a different [RF
+    module](inverter_overview.md) to support your inverter. The display is
+    optional. You may wire the components to other GPIOs, if you
+    upload a matching [Device Profile](../firmware/device_profiles.md).
 
 ![Symbolic](../assets/images/hardware/Wiring_OlimexPoeIso_NRF24_Symbolic.png)

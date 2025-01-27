@@ -1,4 +1,11 @@
-# Available cases
+# Cases for Sale
+
+{% include '3rd_party/opendtu_fusion_endorsement.md' %}
+
+# Print Yourself
+
+If you have access to a 3D printer, you might enjoy the following freely
+available case designs.
 
 ## OpenDTU Fusion
 

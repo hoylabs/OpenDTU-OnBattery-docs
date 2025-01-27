@@ -1,5 +1,9 @@
 # OpenDTU Fusion
 
+{% include '3rd_party/opendtu_fusion_endorsement.md' %}
+
+## Overview
+
 ![Overview](../assets/images/3rd_party/opendtu_fusion/overview.png)
 
 This board was developed by [@markusdd](https://github.com/markusdd) and the
@@ -46,8 +50,3 @@ repository](https://github.com/hoylabs/OpenDTU-OnBattery/blob/master/docs/Device
 
 The board-specific documentation is available over at the [OpenDTU Fusion
 documentation repository](https://github.com/markusdd/OpenDTUFusionDocs).
-
-## How to Obtain
-
-For info on where to buy this board refer to the [Where to
-get](https://github.com/markusdd/OpenDTUFusionDocs#where-to-get) section.

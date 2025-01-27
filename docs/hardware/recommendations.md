@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-If you insist on wiring up the hardware yourself instead of using an
+If you are interested in wiring up the hardware yourself instead of using an
 [integrated solution](../3rd_party/opendtu_fusion.md), acquire an ESP32-S3
 DevKit Board with a `N16R2` type of module.
 

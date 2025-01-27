@@ -2,11 +2,17 @@
 
 These boards are generally a good choice to run OpenDTU-OnBattery if you aspire
 to assemble your own hardware components. Have a look at the [user
-guide](https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html).
+guide](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide.html).
 
 !!!note "Flash Memory"
     The original boards by Espressif as well as the imitations should all have
     at least 8 MB of flash memory, making it possible to use OTA updates.
+
+!!!warning "Incompatibility with ESP32-DevKitC"
+    The ESP32-S3-DevKitC boards are **not** compatible to the non-S3 versions.
+    They cannot be used as drop-in upgrades in your existing hardware.
+    The ESP32-S3-DevKitC boards have a higher pin count and incompatible pin
+    assignements.
 
 !!!warning "Reserved Pins"
     ESP32-S3 modules with 8 MB of PSRAM use an octal SPI interface. On these

@@ -111,6 +111,7 @@ nav:
       - ESP32 Boards:
         - hardware/recommendations.md
         - hardware/esp32s3_devkit.md
+        - hardware/esp32_devkit.md
         - hardware/esp32nodemcu_38pin.md
         - hardware/olimexpoeiso.md
       - RF Modules:

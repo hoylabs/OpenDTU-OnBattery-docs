@@ -16,7 +16,7 @@
         <link rel="prev" href="../recommendations/">
       
       
-        <link rel="next" href="../esp32nodemcu_38pin/">
+        <link rel="next" href="../esp32_devkit/">
       
       
       <link rel="icon" href="../../favicon.ico">
@@ -752,6 +752,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../esp32_devkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ESP32 DevKit
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2814,12 +2835,19 @@
 
 <h1 id="esp32-s3-devkit">ESP32-S3 DevKit</h1>
 <p>These boards are generally a good choice to run OpenDTU-OnBattery if you aspire
-to assemble your own hardware components. Have a look at the <a href="https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html">user
+to assemble your own hardware components. Have a look at the <a href="https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide.html">user
 guide</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Flash Memory</p>
 <p>The original boards by Espressif as well as the imitations should all have
 at least 8 MB of flash memory, making it possible to use OTA updates.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Incompatibility with ESP32-DevKitC</p>
+<p>The ESP32-S3-DevKitC boards are <strong>not</strong> compatible to the non-S3 versions.
+They cannot be used as drop-in upgrades in your existing hardware.
+The ESP32-S3-DevKitC boards have a higher pin count and incompatible pin
+assignements.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Reserved Pins</p>
@@ -2865,7 +2893,7 @@ the native USB stack of the ESP32-S3.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 24, 2024 11:29:32</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 27, 2025 11:29:03</span>
   </span>
 
     

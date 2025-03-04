@@ -5,9 +5,9 @@
 
 ## Technical details
 
-| Property | Value |
-| ---- | ---------- |
-| Name | Olimex ESP32-POE-ISO |
+| Property     | Value                                                                                           |
+|--------------|-------------------------------------------------------------------------------------------------|
+| Name         | Olimex ESP32-POE-ISO                                                                            |
 | Product Info | [Link](https://www.olimex.com/Products/IoT/ESP32/ESP32-POE/open-source-hardware){target=_blank} |
 
 ## Description

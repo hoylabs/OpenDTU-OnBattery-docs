@@ -75,7 +75,7 @@ settings, and not tied to a time of day through software.
     causes switching to a battery discharge cycle when a specific time point,
     i.e., sunset, is reached. It also causes that the discharge cycle ends at
     sunrise, if it was started because of this feature, and if it did not end
-    because of the stop threshold during the night anyways.
+    because of the stop threshold during the night anyway.
 
 [useatnight]: configuration/dpl.md#use-battery-at-night-even-if-only-partially-charged
 
@@ -118,13 +118,13 @@ output power.
    consumption](configuration/dpl.md#target-grid-consumption) value. If no
    power meter reading is available, the configured [base
    load](configuration/dpl.md#base-load) is used.
-1. The calculated desired total inverter output is confined by the configured
+2. The calculated desired total inverter output is confined by the configured
    [maximum total output](configuration/dpl.md#maximum-total-output).
-1. Solar-powered inverters, if any, are set up with limits such that the desired
+3. Solar-powered inverters, if any, are set up with limits such that the desired
    total inverter output is matched as closely as possible.
-1. The expected output of all solar-powered inverters after their new update
+4. The expected output of all solar-powered inverters after their new update
    is applied is subtracted from the desired total inverter output.
-1. An allowance of DC power is calculated that the battery-powered inverters
+5. An allowance of DC power is calculated that the battery-powered inverters
    may consume. The following is a possibly incomplete list of typical
    scenarios:
     * The battery charge may be below the [stop
@@ -138,9 +138,9 @@ output power.
       so the allowance is effectively infinite.
     * Even if the battery is fully charged, the battery discharge limit can
       reduce the allowance accordingly.
-1. The remaining desired total inverter output is confined by the battery
+6. The remaining desired total inverter output is confined by the battery
    allowance.
-1. Battery-powered inverters, if any, are set up with limits such that the
+7. Battery-powered inverters, if any, are set up with limits such that the
    remaining desired total inverter output is matched as closely as possible.
 
 Choosing new limits for the inverters is based on the difference between the

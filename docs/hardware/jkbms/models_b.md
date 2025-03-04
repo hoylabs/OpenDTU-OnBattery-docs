@@ -2,7 +2,7 @@
 
 ![JK-B* Models](../../assets/images/hardware/jkbms/old_style.png)
 
-The support for JK BMS was developed and testest against a `JK-B1A24S15P`
+The support for JK BMS was developed and tested against a `JK-B1A24S15P`
 model. It is assumed that all JK BMS (in this series) implement the same
 protocol on their UART interface. The following models are listed in a manual
 that includes the tested model:

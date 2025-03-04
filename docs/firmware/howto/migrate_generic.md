@@ -2,7 +2,7 @@
 
 !!!note "Applicability"
     This information only applies to older releases. Neither the `generic` nor
-    the `generic_esp32` firmware variants are released any more.
+    the `generic_esp32` firmware variants are released anymore.
 
 ## Differences
 

@@ -13,7 +13,7 @@ Perform these steps to configure pin assignments for your board:
 
 ## Details
 
-It is required to setup hardware settings like pin assignments or Ethernet
+It is required to set up hardware settings like pin assignments or Ethernet
 support using a JSON file. This tells OpenDTU-OnBattery what peripherals are
 connected and how they are connected. The JSON file is uploaded using the
 configuration management (**Settings** --> **Config Management**) in the web
@@ -214,60 +214,60 @@ assumed that you know what you are doing.
 
 ## Implemented configuration values
 
-| Parameter       | Data Type | Description |
-| --------------- | --------- | ----------- |
-| name            | string    | Unique name of the profile (max 63 characters) |
-| links           | array     | Must contain a object with the properties **name** and **url**. For each object a button is shown in the Device-Manager
-| nrf24.miso      | number    | MISO Pin |
-| nrf24.mosi      | number    | MOSI Pin |
-| nrf24.clk       | number    | Clock Pin |
-| nrf24.irq       | number    | Interrupt Pin |
-| nrf24.en        | number    | Enable Pin |
-| nrf24.cs        | number    | Chip Select Pin |
-| cmt.sdio        | number    | SDIO Pin |
-| cmt.clk         | number    | CLK Pin |
-| cmt.cs          | number    | CS Pin |
-| cmt.fcs         | number    | FCS Pin |
-| cmt.gpio2       | number    | GPIO2 Pin (optional) |
-| cmt.gpio3       | number    | GPIO3 Pin (optional) |
-| eth.enabled     | boolean   | Enable/Disable the ethernet stack |
-| eth.phy_addr    | number    | Unique PHY addr |
-| eth.power       | number    | Power Pin (if available). Use -1 for not assigned pins. |
-| eth.mdc         | number    | Serial Management Interface MDC Pin. Use -1 for not assigned pins. |
-| eth.mdio        | number    | Serial Management Interface MDIO Pin. Use -1 for not assigned pins. |
-| eth.type        | number    | Possible values:<ul><li>0 = ETH_PHY_LAN8720</li><li>1 = ETH_PHY_TLK110</li><li>2 = ETH_PHY_RTL8201</li><li>3 = ETH_PHY_DP83848</li><li>4 = ETH_PHY_DM9051</li><li>5 = ETH_PHY_KSZ8041</li><li>6 = ETH_PHY_KSZ8081</li></ul> |
-| eth.clk_mode    | number    | Possible values:<ul><li>0 = ETH_CLOCK_GPIO0_IN</li><li>1 = ETH_CLOCK_GPIO0_OUT</li><li>2 = ETH_CLOCK_GPIO16_OUT</li><li>3 = ETH_CLOCK_GPIO17_OUT</li></ul> |
-| w5500.sclk      | number    | W5500 SPI Clock Pin |
-| w5500.mosi      | number    | W5500 MOSI Pin |
-| w5500.miso      | number    | W5500 MISO Pin |
-| w5500.cs        | number    | W5500 Chip Select Pin |
-| w5500.int       | number    | W5500 Interrupt Pin |
-| w5500.rst       | number    | W5500 Reset Pin |
-| display.type    | number    | Specify type of display. Possible values:<ul><li>0 = None (default)</li><li>1 = PCD8544</li><li>2 = SSD1306</li><li>3 = SH1106</li><li>4 = SSD1309</li><li>5 = ST7567S GM12864-59N</li></ul> |
-| display.data    | number    | Data Pin (e.g. SDA for i2c displays) required for all displays. Use 255 for not assigned pins. |
-| display.clk     | number    | Clock Pin (e.g. SCL for i2c displays) required for SSD1306 and SH1106. Use 255 for not assigned pins. |
-| display.cs      | number    | Chip Select Pin required for PCD8544. Use 255 for not assigned pins. |
-| display.reset   | number    | Reset Pin required for PCD8544, optional for all other displays. Use 255 for not assigned pins. |
-| led.led0        | number    | LED pin for network indication. <ul><li>Blinking = WLAN connected but NTP & MQTT (if enabled) disconnected.</li><li>On = WLAN, NTP, MQTT connected.</li><li>Off = Network not connected</li></ul> |
+| Parameter       | Data Type | Description                                                                                                                                                                                                                                                          |
+|-----------------|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| name            | string    | Unique name of the profile (max 63 characters)                                                                                                                                                                                                                       |
+| links           | array     | Must contain a object with the properties **name** and **url**. For each object a button is shown in the Device-Manager                                                                                                                                              |
+| nrf24.miso      | number    | MISO Pin                                                                                                                                                                                                                                                             |
+| nrf24.mosi      | number    | MOSI Pin                                                                                                                                                                                                                                                             |
+| nrf24.clk       | number    | Clock Pin                                                                                                                                                                                                                                                            |
+| nrf24.irq       | number    | Interrupt Pin                                                                                                                                                                                                                                                        |
+| nrf24.en        | number    | Enable Pin                                                                                                                                                                                                                                                           |
+| nrf24.cs        | number    | Chip Select Pin                                                                                                                                                                                                                                                      |
+| cmt.sdio        | number    | SDIO Pin                                                                                                                                                                                                                                                             |
+| cmt.clk         | number    | CLK Pin                                                                                                                                                                                                                                                              |
+| cmt.cs          | number    | CS Pin                                                                                                                                                                                                                                                               |
+| cmt.fcs         | number    | FCS Pin                                                                                                                                                                                                                                                              |
+| cmt.gpio2       | number    | GPIO2 Pin (optional)                                                                                                                                                                                                                                                 |
+| cmt.gpio3       | number    | GPIO3 Pin (optional)                                                                                                                                                                                                                                                 |
+| eth.enabled     | boolean   | Enable/Disable the ethernet stack                                                                                                                                                                                                                                    |
+| eth.phy_addr    | number    | Unique PHY addr                                                                                                                                                                                                                                                      |
+| eth.power       | number    | Power Pin (if available). Use -1 for not assigned pins.                                                                                                                                                                                                              |
+| eth.mdc         | number    | Serial Management Interface MDC Pin. Use -1 for not assigned pins.                                                                                                                                                                                                   |
+| eth.mdio        | number    | Serial Management Interface MDIO Pin. Use -1 for not assigned pins.                                                                                                                                                                                                  |
+| eth.type        | number    | Possible values:<ul><li>0 = ETH_PHY_LAN8720</li><li>1 = ETH_PHY_TLK110</li><li>2 = ETH_PHY_RTL8201</li><li>3 = ETH_PHY_DP83848</li><li>4 = ETH_PHY_DM9051</li><li>5 = ETH_PHY_KSZ8041</li><li>6 = ETH_PHY_KSZ8081</li></ul>                                          |
+| eth.clk_mode    | number    | Possible values:<ul><li>0 = ETH_CLOCK_GPIO0_IN</li><li>1 = ETH_CLOCK_GPIO0_OUT</li><li>2 = ETH_CLOCK_GPIO16_OUT</li><li>3 = ETH_CLOCK_GPIO17_OUT</li></ul>                                                                                                           |
+| w5500.sclk      | number    | W5500 SPI Clock Pin                                                                                                                                                                                                                                                  |
+| w5500.mosi      | number    | W5500 MOSI Pin                                                                                                                                                                                                                                                       |
+| w5500.miso      | number    | W5500 MISO Pin                                                                                                                                                                                                                                                       |
+| w5500.cs        | number    | W5500 Chip Select Pin                                                                                                                                                                                                                                                |
+| w5500.int       | number    | W5500 Interrupt Pin                                                                                                                                                                                                                                                  |
+| w5500.rst       | number    | W5500 Reset Pin                                                                                                                                                                                                                                                      |
+| display.type    | number    | Specify type of display. Possible values:<ul><li>0 = None (default)</li><li>1 = PCD8544</li><li>2 = SSD1306</li><li>3 = SH1106</li><li>4 = SSD1309</li><li>5 = ST7567S GM12864-59N</li></ul>                                                                         |
+| display.data    | number    | Data Pin (e.g. SDA for i2c displays) required for all displays. Use 255 for not assigned pins.                                                                                                                                                                       |
+| display.clk     | number    | Clock Pin (e.g. SCL for i2c displays) required for SSD1306 and SH1106. Use 255 for not assigned pins.                                                                                                                                                                |
+| display.cs      | number    | Chip Select Pin required for PCD8544. Use 255 for not assigned pins.                                                                                                                                                                                                 |
+| display.reset   | number    | Reset Pin required for PCD8544, optional for all other displays. Use 255 for not assigned pins.                                                                                                                                                                      |
+| led.led0        | number    | LED pin for network indication. <ul><li>Blinking = WLAN connected but NTP & MQTT (if enabled) disconnected.</li><li>On = WLAN, NTP, MQTT connected.</li><li>Off = Network not connected</li></ul>                                                                    |
 | led.led1        | number    | LED pin for inverter indication. <ul><li>On = All inverters reachable & producing.</li><li>Blinking = All inverters reachable but not producing.</li><li>Off = At least one inverter is not reachable.</li></ul> Only inverters with polling enabled are considered. |
-| victron.rx      | number    | Victron MPPT Charger VE.Direct receive pin  |
-| victron.tx      | number    | Victron MPPT Charger VE.Direct transmit pin, can be set to -1 |
-| victron.rx2     | number    | Second Victron MPPT Charger VE.Direct receive pin  |
-| victron.tx2     | number    | Second Victron MPPT Charger VE.Direct transmit pin, can be set to -1 |
-| victron.rx3     | number    | Third Victron MPPT Charger VE.Direct receive pin  |
-| victron.tx3     | number    | Third Victron MPPT Charger VE.Direct transmit pin, can be set to -1 |
-| battery.rx      | number    | Pylontech battery CAN bus receive pin,<br/> JK BMS receive pin or<br/> Victron SmartShunt VE.Direct receive pin |
-| battery.tx      | number    | Pylontech battery CAN bus transmit pin,<br/> JK BMS transmit pin or<br/> Victron SmartShunt VE.Direct  transmit pin |
-| battery.rxen    | number    | JK BMS receive enable pin for RS485 transceiver mode |
-| battery.txen    | number    | JK BMS transmit enable pin for RS485 transceiver mode |
-| huawei.miso     | number    | MISO Pin for Huawei CAN bus interface |
-| huawei.mosi     | number    | MOSI Pin for Huawei CAN bus interface |
-| huawei.clk      | number    | CLK Pin for Huawei CAN bus interface |
-| huawei.cs       | number    | CS Pin for Huawei CAN bus interface |
-| huawei.irq      | number    | IRQ Pin for Huawei CAN bus interface |
-| huawei.power    | number    | Power Pin for Huawei power control (e.g. using slot detect) |
-| powermeter.rx   | number    | Serial power meter receive pin |
-| powermeter.tx   | number    | Serial power meter transmit pin (required for SDM, invalid for SML) |
-| powermeter.dere | number    | Serial power meter "driver/receiver enable" pin (only for SDM, optional, can't be combined with rxen+txen) |
-| powermeter.rxen | number    | Serial power meter "receiver enable" pin (only for SDM, optional, requires txen, can't be combined with dere) |
-| powermeter.txen | number    | Serial power meter "driver enable" pin (only for SDM, optional, requires rxen, can't be combined with dere) |
+| victron.rx      | number    | Victron MPPT Charger VE.Direct receive pin                                                                                                                                                                                                                           |
+| victron.tx      | number    | Victron MPPT Charger VE.Direct transmit pin, can be set to -1                                                                                                                                                                                                        |
+| victron.rx2     | number    | Second Victron MPPT Charger VE.Direct receive pin                                                                                                                                                                                                                    |
+| victron.tx2     | number    | Second Victron MPPT Charger VE.Direct transmit pin, can be set to -1                                                                                                                                                                                                 |
+| victron.rx3     | number    | Third Victron MPPT Charger VE.Direct receive pin                                                                                                                                                                                                                     |
+| victron.tx3     | number    | Third Victron MPPT Charger VE.Direct transmit pin, can be set to -1                                                                                                                                                                                                  |
+| battery.rx      | number    | Pylontech battery CAN bus receive pin,<br/> JK BMS receive pin or<br/> Victron SmartShunt VE.Direct receive pin                                                                                                                                                      |
+| battery.tx      | number    | Pylontech battery CAN bus transmit pin,<br/> JK BMS transmit pin or<br/> Victron SmartShunt VE.Direct  transmit pin                                                                                                                                                  |
+| battery.rxen    | number    | JK BMS receive enable pin for RS485 transceiver mode                                                                                                                                                                                                                 |
+| battery.txen    | number    | JK BMS transmit enable pin for RS485 transceiver mode                                                                                                                                                                                                                |
+| huawei.miso     | number    | MISO Pin for Huawei CAN bus interface                                                                                                                                                                                                                                |
+| huawei.mosi     | number    | MOSI Pin for Huawei CAN bus interface                                                                                                                                                                                                                                |
+| huawei.clk      | number    | CLK Pin for Huawei CAN bus interface                                                                                                                                                                                                                                 |
+| huawei.cs       | number    | CS Pin for Huawei CAN bus interface                                                                                                                                                                                                                                  |
+| huawei.irq      | number    | IRQ Pin for Huawei CAN bus interface                                                                                                                                                                                                                                 |
+| huawei.power    | number    | Power Pin for Huawei power control (e.g. using slot detect)                                                                                                                                                                                                          |
+| powermeter.rx   | number    | Serial power meter receive pin                                                                                                                                                                                                                                       |
+| powermeter.tx   | number    | Serial power meter transmit pin (required for SDM, invalid for SML)                                                                                                                                                                                                  |
+| powermeter.dere | number    | Serial power meter "driver/receiver enable" pin (only for SDM, optional, can't be combined with rxen+txen)                                                                                                                                                           |
+| powermeter.rxen | number    | Serial power meter "receiver enable" pin (only for SDM, optional, requires txen, can't be combined with dere)                                                                                                                                                        |
+| powermeter.txen | number    | Serial power meter "driver enable" pin (only for SDM, optional, requires rxen, can't be combined with dere)                                                                                                                                                          |

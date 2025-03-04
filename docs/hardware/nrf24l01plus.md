@@ -2,15 +2,15 @@
 
 ## Technical details
 
-| Property | Value |
-| ---- | ---------- |
-| Name | nRF24L01+ |
-| Frequency | 2.4GHz |
+| Property  | Value                                                                                                                              |
+|-----------|------------------------------------------------------------------------------------------------------------------------------------|
+| Name      | nRF24L01+                                                                                                                          |
+| Frequency | 2.4GHz                                                                                                                             |
 | Datasheet | [Link](https://www.sparkfun.com/datasheets/Components/SMD/nRF24L01Pluss_Preliminary_Product_Specification_v1_0.pdf){target=_blank} |
 
 ## Description
 
-The NRF24L01+ module is a 2,4GHz RF module. **It is absolutly important to get
+The NRF24L01+ module is a 2,4GHz RF module. **It is absolutely important to get
 the newer PLUS variant**! Only the PLUS variant supports the required
 transmission speeds and is able to communicate with the inverter.
 There are several variants with different qualities and prices. Most of them
@@ -52,13 +52,13 @@ A heavily incomplete list of trusted hardware shops in Germany:
 The actual pins used to connect the nRF24L01+ module to the ESP32 module are
 configured using a [Device Profile](../firmware/device_profiles.md).
 
-| Name in Device Profile | Pin Function | Description | Possible name(s) on PCB |
-| ---------------------- | ------------ | ----------- | -------------------- |
-| miso | Digital Output | SPI Slave Data Output | MISO |
-| mosi | Digital Input | SPI Slave Data Input | MOSI |
-| clk | Digital Input | SPI Clock | CLK, SCK |
-| irq | Digital Output | Interrupt pin | IRQ |
-| en | Digital Input | Chip Enable | EN, CE |
-| cs | Digital Input | SPI Chip Select | CS, CSN |
-|    | Power | Power Supply (1,9V - 3.6V) | VDD, VCC |
-|    | Power | Ground | VSS, GND |
+| Name in Device Profile | Pin Function   | Description                | Possible name(s) on PCB |
+|------------------------|----------------|----------------------------|-------------------------|
+| miso                   | Digital Output | SPI Slave Data Output      | MISO                    |
+| mosi                   | Digital Input  | SPI Slave Data Input       | MOSI                    |
+| clk                    | Digital Input  | SPI Clock                  | CLK, SCK                |
+| irq                    | Digital Output | Interrupt pin              | IRQ                     |
+| en                     | Digital Input  | Chip Enable                | EN, CE                  |
+| cs                     | Digital Input  | SPI Chip Select            | CS, CSN                 |
+|                        | Power          | Power Supply (1,9V - 3.6V) | VDD, VCC                |
+|                        | Power          | Ground                     | VSS, GND                |

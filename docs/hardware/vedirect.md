@@ -59,7 +59,7 @@ pin and UART on the ESP32.
 
 ## VE.Direct Physical Interface
 
-The VE.Direct socket on the Victron device is male and is comprised of four
+The VE.Direct socket on the Victron device is male and comprises four
 pins, which are assigned as follows:
 
 ![VE.Direct Pin-Out](../assets/images/hardware/vedirect_pinout.png)

@@ -2,7 +2,7 @@
 
 OpenDTU-OnBattery currently supports different types of displays (see below).
 Currently only displays with a resolution of 128x64 pixel are supported. To
-activate a display you have to specify it's type and pin assignment in a
+activate a display you have to specify its type and pin assignment in a
 [device profile](../firmware/device_profiles.md).
 
 ## Display Settings

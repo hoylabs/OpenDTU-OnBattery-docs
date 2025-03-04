@@ -148,7 +148,7 @@ Doing so will prevent battery discharging during the day, but will also prevent
 discharging during the night if the start threshold was not reached.
 
 !!!note "Efficiency"
-    With Solar-Passthrough disabled, it is more efficient to chose a low
+    With Solar-Passthrough disabled, it is more efficient to choose a low
     start threshold and to disable this option, such that produced energy is
     used immediately rather than stored in the battery first.
 
@@ -287,7 +287,7 @@ In order to not stop the inverter too early (stop threshold) while the battery
 is being discharged, this load correction factor can be specified to calculate
 (estimate) the battery voltage if it became idle. In other words: This value
 should be chosen such that the battery settles back to around the stop
-threshold voltage in the moment the DPL decides to stop discharging the battery
+threshold voltage at the moment the DPL decides to stop discharging the battery
 because it hit the stop threshold.
 
 `corrected (idle) voltage = measured battery voltage + (power * correction factor)`

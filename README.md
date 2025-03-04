@@ -34,10 +34,10 @@ The above command will create a Virtual Environment in the subdirectory venv in 
 Activate the Virtual Environment:
 - For Linux Based OS Or Mac-OS: source venv/bin/activate
 - For Windows With CMD: venv\Scripts\activate.bat
-- For Windows With Power shell: .\venv\Scripts\activate.ps1
+- For Windows With PowerShell: .\venv\Scripts\activate.ps1
 - For Windows With Unix Like Shells For Example Git Bash CLI: source venv/Scripts/activate
 
-Download the OpenDTU-OnBattery-docs ZIP file and expamd it inside the venv directory.
+Download the OpenDTU-OnBattery-docs ZIP file and expand it inside the venv directory.
 Using the command editor (cmd.exe), switch to that directory and give the command:
 ```sh
 pip3 install -r requirements.txt

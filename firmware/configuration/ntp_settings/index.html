@@ -3108,7 +3108,7 @@
 <h3 id="ntp-configuration">NTP Configuration</h3>
 <p>OpenDTU-OnBattery needs a proper synced clock to start fetching the inverter. (Every request contains the time. This synchronises the clock in the inverter at the same time. This is particularly important for the event display.)</p>
 <h4 id="time-server">Time Server <span class="twemoji" title="Textbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7h5v10h-5v2a1 1 0 0 0 1 1h2v2h-2.5c-.55 0-1.5-.45-1.5-1 0 .55-.95 1-1.5 1H12v-2h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-2V2h2.5c.55 0 1.5.45 1.5 1 0-.55.95-1 1.5-1H20v2h-2a1 1 0 0 0-1 1zM2 7h11v2H4v6h9v2H2zm18 8V9h-3v6z"/></svg></span></h4>
-<p>Hostname or IP address of your NTP<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> server. The default value is ok unless your WiFi does not provide access to the internet. In this case you have to enter your own NTP server (mostly the IP of your router e.g. <code>192.168.178.1</code>).</p>
+<p>Hostname or IP address of your NTP<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> server. The default value is ok unless your Wi-Fi does not provide access to the internet. In this case you have to enter your own NTP server (mostly the IP of your router e.g. <code>192.168.178.1</code>).</p>
 <h4 id="timezone">Timezone <span class="twemoji" title="Dropdown"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 5h3l-1.5 2zM3 2h18a2 2 0 0 1 2 2v4c0 1.11-.89 2-2 2h-5v10c0 1.11-.89 2-2 2H3a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2m0 2v4h11V4zm18 4V4h-5v4zM3 20h11V10H3zm2-8h7v2H5zm0 4h7v2H5z"/></svg></span></h4>
 <p>Select the city or timezone you are in. NTP<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup> deliver the current time as UTC<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>. The timezone is used to calculate your specific current time.</p>
 <h4 id="timezone-config">Timezone Config <span class="twemoji" title="Read only Textbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 7h4v2H4v6h2v2H2zm8 0h12v5c-.58-.44-1.26-.75-2-.9V9H10v6h4.25c-.69 0-1.25.56-1.25 1.25V17h-3v2c0 .55.45 1 1 1h2v2h-2.5c-.55 0-1.5-.45-1.5-1 0 .55-.95 1-1.5 1H5v-2h2c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1H5V2h2.5C8.05 2 9 2.45 9 3c0-.55.95-1 1.5-1H13v2h-2c-.55 0-1 .45-1 1zm11.8 10c.6 0 1.2.6 1.2 1.3v3.5c0 .6-.6 1.2-1.3 1.2h-5.5c-.6 0-1.2-.6-1.2-1.3v-3.5c0-.6.6-1.2 1.2-1.2v-1.5c0-1.4 1.4-2.5 2.8-2.5s2.8 1.1 2.8 2.5zm-1.3 0v-1.5c0-.8-.7-1.3-1.5-1.3s-1.5.5-1.5 1.3V17z"/></svg></span></h4>
@@ -3120,7 +3120,7 @@
 <h4 id="longitude">Longitude <span class="twemoji" title="Textbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7h5v10h-5v2a1 1 0 0 0 1 1h2v2h-2.5c-.55 0-1.5-.45-1.5-1 0 .55-.95 1-1.5 1H12v-2h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-2V2h2.5c.55 0 1.5.45 1.5 1 0-.55.95-1 1.5-1H20v2h-2a1 1 0 0 0-1 1zM2 7h11v2H4v6h9v2H2zm18 8V9h-3v6z"/></svg></span></h4>
 <p>Longitude of the location of your inverter in degree.</p>
 <h4 id="sunset-type">Sunset type <span class="twemoji" title="Dropdown"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 5h3l-1.5 2zM3 2h18a2 2 0 0 1 2 2v4c0 1.11-.89 2-2 2h-5v10c0 1.11-.89 2-2 2H3a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2m0 2v4h11V4zm18 4V4h-5v4zM3 20h11V10H3zm2-8h7v2H5zm0 4h7v2H5z"/></svg></span></h4>
-<p>There are differnt "Sunset types" which add different offsets to the calculated time.
+<p>There are different "Sunset types" which add different offsets to the calculated time.
 The following values are possible:</p>
 <ul>
 <li>Standard dawn (90.8°)</li>
@@ -3135,10 +3135,10 @@ The following values are possible:</p>
 <h4 id="current-local-time">Current Local Time <span class="twemoji" title="Read only Textbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 7h4v2H4v6h2v2H2zm8 0h12v5c-.58-.44-1.26-.75-2-.9V9H10v6h4.25c-.69 0-1.25.56-1.25 1.25V17h-3v2c0 .55.45 1 1 1h2v2h-2.5c-.55 0-1.5-.45-1.5-1 0 .55-.95 1-1.5 1H5v-2h2c.55 0 1-.45 1-1V5c0-.55-.45-1-1-1H5V2h2.5C8.05 2 9 2.45 9 3c0-.55.95-1 1.5-1H13v2h-2c-.55 0-1 .45-1 1zm11.8 10c.6 0 1.2.6 1.2 1.3v3.5c0 .6-.6 1.2-1.3 1.2h-5.5c-.6 0-1.2-.6-1.2-1.3v-3.5c0-.6.6-1.2 1.2-1.2v-1.5c0-1.4 1.4-2.5 2.8-2.5s2.8 1.1 2.8 2.5zm-1.3 0v-1.5c0-.8-.7-1.3-1.5-1.3s-1.5.5-1.5 1.3V17z"/></svg></span></h4>
 <p>Shows the current time detected from your web browser.</p>
 <h4 id="synchronize-time">Synchronize Time <span class="twemoji" title="Button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.1 15.3c-.1.1-.3.2-.4.3l-2.4.4 1.7 3.6c.2.4 0 .8-.4 1l-2.8 1.3c-.1.1-.2.1-.3.1-.3 0-.6-.2-.7-.4L11.2 18l-1.9 1.5c-.1.1-.3.2-.5.2-.4 0-.8-.3-.8-.8V7.5c0-.5.3-.8.8-.8.2 0 .4.1.5.2l8.7 7.4c.3.2.4.7.1 1M6 12H4V4h16v8h-1.6l2.2 1.9c.8-.3 1.3-1 1.3-1.9V4c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h2z"/></svg></span></h4>
-<p>Press this button to manually synchronize the ESP time with your local time. This can be usefull if no NTP server is available.</p>
+<p>Press this button to manually synchronize the ESP time with your local time. This can be useful if no NTP server is available.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Keep in mind, that the time gets lost after a power cycle. Also note, that the time accuracy will be skewed badly, as it can not resynchronised regularly using a NTP server and the ESP32 microcontroller does not have a RTC<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>.</p>
+<p>Keep in mind, that the time gets lost after a power cycle. Also note, that the time accuracy will be skewed badly, as it can not be resynchronised regularly using a NTP server and the ESP32 microcontroller does not have a RTC<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>.</p>
 </div>
 <div class="footnote">
 <hr />
@@ -3179,7 +3179,7 @@ The following values are possible:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">May 16, 2024 09:23:27</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 6, 2025 13:35:25</span>
   </span>
 
     

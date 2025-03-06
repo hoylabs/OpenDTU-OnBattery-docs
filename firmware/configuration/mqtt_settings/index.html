@@ -3396,9 +3396,9 @@
 <h4 id="enable-home-assistant-mqtt-auto-discovery">Enable Home Assistant MQTT Auto Discovery <span class="twemoji" title="Switch"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg></span></h4>
 <p>Enables or disables the <a href="https://www.home-assistant.io/integrations/mqtt/#mqtt-discovery" target="_blank">Home Assistant MQTT Auto Discovery</a> functionality.</p>
 <h3 id="mqtt-broker-parameter">MQTT Broker Parameter</h3>
-<p>This settings are only visible if <a href="#enable-mqtt">MQTT</a> is enabled.</p>
+<p>These settings are only visible if <a href="#enable-mqtt">MQTT</a> is enabled.</p>
 <h4 id="hostname">Hostname <span class="twemoji" title="Textbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7h5v10h-5v2a1 1 0 0 0 1 1h2v2h-2.5c-.55 0-1.5-.45-1.5-1 0 .55-.95 1-1.5 1H12v-2h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-2V2h2.5c.55 0 1.5.45 1.5 1 0-.55.95-1 1.5-1H20v2h-2a1 1 0 0 0-1 1zM2 7h11v2H4v6h9v2H2zm18 8V9h-3v6z"/></svg></span></h4>
-<p>Host name or IP address of your MQTT broker. Make sure your DNS servers are set-up properly if you specify a host name.</p>
+<p>Host name or IP address of your MQTT broker. Make sure your DNS servers are set up properly if you specify a host name.</p>
 <h4 id="port">Port <span class="twemoji" title="Textbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7h5v10h-5v2a1 1 0 0 0 1 1h2v2h-2.5c-.55 0-1.5-.45-1.5-1 0 .55-.95 1-1.5 1H12v-2h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-2V2h2.5c.55 0 1.5.45 1.5 1 0-.55.95-1 1.5-1H20v2h-2a1 1 0 0 0-1 1zM2 7h11v2H4v6h9v2H2zm18 8V9h-3v6z"/></svg></span></h4>
 <p>Port of your MQTT broker. Default port for unencrypted connections is <code>1883</code> and for encrypted connections <code>8883</code>.</p>
 <h4 id="username">Username <span class="twemoji" title="Textbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7h5v10h-5v2a1 1 0 0 0 1 1h2v2h-2.5c-.55 0-1.5-.45-1.5-1 0 .55-.95 1-1.5 1H12v-2h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-2V2h2.5c.55 0 1.5.45 1.5 1 0-.55.95-1 1.5-1H20v2h-2a1 1 0 0 0-1 1zM2 7h11v2H4v6h9v2H2zm18 8V9h-3v6z"/></svg></span></h4>
@@ -3412,19 +3412,19 @@
 <h4 id="enable-cleansession-flag">Enable CleanSession flag <span class="twemoji" title="Switch"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg></span></h4>
 <p>Enables the CleanSession<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> flag for MQTT communication.</p>
 <h4 id="enable-retain-flag">Enable Retain flag <span class="twemoji" title="Switch"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg></span></h4>
-<p>Publish all information with retain<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> flag. This has the advantage that each value is immediatly avilable if you connect to your broker and subscribe to the specific topics you will get immediatly the latest values.</p>
+<p>Publish all information with retain<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> flag. This has the advantage that each value is immediately available if you connect to your broker and subscribe to the specific topics you will get immediately the latest values.</p>
 <h4 id="enable-tls">Enable TLS <span class="twemoji" title="Switch"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg></span></h4>
-<p>Enables a secure TLS connection to your MQTT broker. If using this you have to get a proper certificate (self signed will not work, is has to be signed by a CA) and the hostname entered as MQTT Hostname must match the CN in the certificate. You must also specify the CA-Root-Certificate.</p>
+<p>Enables a secure TLS connection to your MQTT broker. If using this you have to get a proper certificate (self signed will not work, it has to be signed by a CA) and the hostname entered as MQTT Hostname must match the CN in the certificate. You must also specify the CA-Root-Certificate.</p>
 <h4 id="ca-root-certificate">CA-Root-Certificate <span class="twemoji" title="Textbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7h5v10h-5v2a1 1 0 0 0 1 1h2v2h-2.5c-.55 0-1.5-.45-1.5-1 0 .55-.95 1-1.5 1H12v-2h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-2V2h2.5c.55 0 1.5.45 1.5 1 0-.55.95-1 1.5-1H20v2h-2a1 1 0 0 0-1 1zM2 7h11v2H4v6h9v2H2zm18 8V9h-3v6z"/></svg></span></h4>
 <p>The root certificate of your CA if you are using a TLS connection to your broker. Should include the <code>-----BEGIN CERTIFICATE-----</code> and <code>-----END CERTIFICATE-----</code> tags.</p>
 <h4 id="enable-tls-certificate-login">Enable TLS Certificate Login <span class="twemoji" title="Switch"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg></span></h4>
-<p>Uses certificates to authenticate agains a MQTT broker. When enabled, the <strong>TLS Client-Certificate</strong> and the <strong>TLS Client-Key</strong> has to be supplied.</p>
+<p>Uses certificates to authenticate against a MQTT broker. When enabled, the <strong>TLS Client-Certificate</strong> and the <strong>TLS Client-Key</strong> has to be supplied.</p>
 <h4 id="tls-client-certificate">TLS Client-Certificate <span class="twemoji" title="Textbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7h5v10h-5v2a1 1 0 0 0 1 1h2v2h-2.5c-.55 0-1.5-.45-1.5-1 0 .55-.95 1-1.5 1H12v-2h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-2V2h2.5c.55 0 1.5.45 1.5 1 0-.55.95-1 1.5-1H20v2h-2a1 1 0 0 0-1 1zM2 7h11v2H4v6h9v2H2zm18 8V9h-3v6z"/></svg></span></h4>
 <p>Should include the <code>-----BEGIN CERTIFICATE-----</code> and <code>-----END CERTIFICATE-----</code> tags.</p>
 <h4 id="tls-client-key">TLS Client-Key <span class="twemoji" title="Textbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7h5v10h-5v2a1 1 0 0 0 1 1h2v2h-2.5c-.55 0-1.5-.45-1.5-1 0 .55-.95 1-1.5 1H12v-2h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-2V2h2.5c.55 0 1.5.45 1.5 1 0-.55.95-1 1.5-1H20v2h-2a1 1 0 0 0-1 1zM2 7h11v2H4v6h9v2H2zm18 8V9h-3v6z"/></svg></span></h4>
 <p>Should include the <code>-----BEGIN CERTIFICATE-----</code> and <code>-----END CERTIFICATE-----</code> tags.</p>
 <h3 id="lwt-parameters">LWT Parameters</h3>
-<p>This settings are only visible if <a href="#enable-mqtt">MQTT</a> is enabled.</p>
+<p>These settings are only visible if <a href="#enable-mqtt">MQTT</a> is enabled.</p>
 <h4 id="lwt-topic">LWT Topic <span class="twemoji" title="Textbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7h5v10h-5v2a1 1 0 0 0 1 1h2v2h-2.5c-.55 0-1.5-.45-1.5-1 0 .55-.95 1-1.5 1H12v-2h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-2V2h2.5c.55 0 1.5.45 1.5 1 0-.55.95-1 1.5-1H20v2h-2a1 1 0 0 0-1 1zM2 7h11v2H4v6h9v2H2zm18 8V9h-3v6z"/></svg></span></h4>
 <p>Sets the topic of the LWT<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> Message</p>
 <h4 id="lwt-online-message">LWT Online message <span class="twemoji" title="Textbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7h5v10h-5v2a1 1 0 0 0 1 1h2v2h-2.5c-.55 0-1.5-.45-1.5-1 0 .55-.95 1-1.5 1H12v-2h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-2V2h2.5c.55 0 1.5.45 1.5 1 0-.55.95-1 1.5-1H20v2h-2a1 1 0 0 0-1 1zM2 7h11v2H4v6h9v2H2zm18 8V9h-3v6z"/></svg></span></h4>
@@ -3434,13 +3434,13 @@
 <h4 id="qos-quality-of-service">QoS (Quality of Service) <span class="twemoji" title="Dropdown"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 5h3l-1.5 2zM3 2h18a2 2 0 0 1 2 2v4c0 1.11-.89 2-2 2h-5v10c0 1.11-.89 2-2 2H3a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2m0 2v4h11V4zm18 4V4h-5v4zM3 20h11V10H3zm2-8h7v2H5zm0 4h7v2H5z"/></svg></span></h4>
 <p>Sets the QoS of the LWT topic.</p>
 <h3 id="home-assistant-mqtt-auto-discovery-parameters">Home Assistant MQTT Auto Discovery Parameters</h3>
-<p>This settings are only visible if <a href="#enable-home-assistant-mqtt-auto-discovery">Enable Home Assistant MQTT Auto Discovery</a> is enabled.</p>
+<p>These settings are only visible if <a href="#enable-home-assistant-mqtt-auto-discovery">Enable Home Assistant MQTT Auto Discovery</a> is enabled.</p>
 <p>Home Assistant provides the <a href="https://www.home-assistant.io/integrations/mqtt/" target="_blank">MQTT integration</a> and through this integration it is possible to exploit and manage the messages published by OpenDTU-OnBattery.
 Once this integration on home assistant is configured with the same MQTT broker, it is possible to create devices manually or through the autodiscovery function.</p>
 <h4 id="prefix-topic">Prefix Topic <span class="twemoji" title="Textbox"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7h5v10h-5v2a1 1 0 0 0 1 1h2v2h-2.5c-.55 0-1.5-.45-1.5-1 0 .55-.95 1-1.5 1H12v-2h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-2V2h2.5c.55 0 1.5.45 1.5 1 0-.55.95-1 1.5-1H20v2h-2a1 1 0 0 0-1 1zM2 7h11v2H4v6h9v2H2zm18 8V9h-3v6z"/></svg></span></h4>
 <p>The base under which all Home Assistant MQTT Auto Discovery magic happens. If you haven't changed this topic in your Home Assistant installation the default <code>homeassistant/</code> is the right one.</p>
 <h4 id="enable-retain-flag_1">Enable Retain Flag <span class="twemoji" title="Switch"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg></span></h4>
-<p>Publish all auto discovery information with retain<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup> flag. This has the advantage that Home Assistant automaticaly finds all devices on restart.</p>
+<p>Publish all auto discovery information with retain<sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup> flag. This has the advantage that Home Assistant automatically finds all devices on restart.</p>
 <h4 id="enable-expiration">Enable Expiration <span class="twemoji" title="Switch"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg></span></h4>
 <p>When enabled, values in Home Assistant will become "unavailable" if they don't receive an update in a given time.</p>
 <h4 id="individual-panels">Individual Panels <span class="twemoji" title="Switch"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg></span></h4>
@@ -3481,7 +3481,7 @@ Once this integration on home assistant is configured with the same MQTT broker,
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 5, 2024 23:08:43</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 6, 2025 13:35:25</span>
   </span>
 
     

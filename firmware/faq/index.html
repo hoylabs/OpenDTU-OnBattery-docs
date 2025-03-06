@@ -2905,7 +2905,7 @@ Due to the fact that on OpenDTU-OnBattery startup it is unknow when the limit wa
 <p>This means that under certain circumstances (activation of WLAN/Ethernet or sending requests to the inverter) the supply voltage drops to such an extent that the ESP can no longer work reliably. This can be remedied, for example, with a 100uF capacitor between VCC and GND. In exceptional cases, the power supply unit also appears to be too weak. The cable cross-section of the USB cable can also have an influence.</p>
 </details>
 <details class="question">
-<summary>After a reboot of the router or access point, OpenDTU-OnBattery does not reconnect immediatly to the Wi-Fi</summary>
+<summary>After a reboot of the router or access point, OpenDTU-OnBattery does not reconnect immediately to the Wi-Fi</summary>
 <p>OpenDTU-OnBattery tries to reconnect to the Wi-Fi for 30 seconds. If it can't find the Wi-Fi within this time it stops reconnecting and waits for 10 minutes until a new connect attempt is done. This is done because all channels are tried during a connection attempt. This means that an end device that is connected to the "Admin Access Point" may lose the connection or is not be able to connect at all.</p>
 </details>
 <h2 id="build-errors">Build errors</h2>
@@ -2915,7 +2915,7 @@ Due to the fact that on OpenDTU-OnBattery startup it is unknow when the limit wa
 <p>Please also see <a href="https://github.com/tbnobody/OpenDTU/issues/719" target="_blank">tbnobody#719</a>.</p>
 </details>
 <details class="question">
-<summary>OpenDTU-OnBattery does not build: "C:/Users/&lt;username&gt;/.platformio/packages/framework-arduinoespressif32/cores/esp32/Arduino.h:33:10: fatal error: freertos/FreeRTOS.h: No such file or directory #include \"freertos/FreeRTOS.h\"</summary>
+<summary>OpenDTU-OnBattery does not build: C:/Users/&lt;username&gt;/.platformio/packages/framework-arduinoespressif32/cores/esp32/Arduino.h:33:10: fatal error: freertos/FreeRTOS.h: No such file or directory #include \"freertos/FreeRTOS.h\"</summary>
 <p>This is most likly a issue with your PlatformIO installation. As a workaround you can delete all packages within the <code>C:/Users/&lt;username\&gt;/.platformio/packages/</code> folder. The content will be downloaded on the next compile attempt.</p>
 </details>
 
@@ -2940,7 +2940,7 @@ Due to the fact that on OpenDTU-OnBattery startup it is unknow when the limit wa
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 15, 2024 11:29:15</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 6, 2025 13:35:25</span>
   </span>
 
     

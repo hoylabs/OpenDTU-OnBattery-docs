@@ -19,7 +19,7 @@ your working directory right before attempting to build the firmware.
 There is a development server which hosts the frontend at your local computer
 and allows easy development. It will forward the requests to the backend
 automatically to your ESP32 (configurable IP address). That means you can
-develop the webinterface without flashing the ESP32 (if the WebAPI stays the
+develop the webinterface without flashing the ESP32 (if the Web API stays the
 same).
 
 ## Install prerequisites

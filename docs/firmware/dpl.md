@@ -75,7 +75,7 @@ settings, and not tied to a time of day through software.
     causes switching to a battery discharge cycle when a specific time point,
     i.e., sunset, is reached. It also causes that the discharge cycle ends at
     sunrise, if it was started because of this feature, and if it did not end
-    because of the stop threshold during the night anyways.
+    because of the stop threshold during the night anyway.
 
 [useatnight]: configuration/dpl.md#use-battery-at-night-even-if-only-partially-charged
 

@@ -12,7 +12,7 @@ guide](https://docs.espressif.com/projects/esp-dev-kits/en/latest/esp32s3/esp32-
     The ESP32-S3-DevKitC boards are **not** compatible to the non-S3 versions.
     They cannot be used as drop-in upgrades in your existing hardware.
     The ESP32-S3-DevKitC boards have a higher pin count and incompatible pin
-    assignements.
+    assignments.
 
 !!!warning "Reserved Pins"
     ESP32-S3 modules with 8 MB of PSRAM use an octal SPI interface. On these

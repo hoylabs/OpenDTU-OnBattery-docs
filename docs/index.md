@@ -70,9 +70,9 @@ It's goal was to replace the original Hoymiles DTU (Telemetry Gateway), which up
 
 ## Support
 
-For support using OpenDTU-OnBattery you can find us on Github or Discord:
+For support using OpenDTU-OnBattery you can find us on GitHub or Discord:
 
-[:material-github: Github Discussions][2]{target=_blank .md-button .md-button--primary }
+[:material-github: GitHub Discussions][2]{target=_blank .md-button .md-button--primary }
 [:fontawesome-brands-discord: Discord Chat][3]{target=_blank .md-button .md-button--primary }
 
 ## Donate

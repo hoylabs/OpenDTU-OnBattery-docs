@@ -10,7 +10,7 @@
 
 ## Description
 
-The NRF24L01+ module is a 2,4GHz RF module. **It is absolutly important to get
+The NRF24L01+ module is a 2,4GHz RF module. **It is absolutely important to get
 the newer PLUS variant**! Only the PLUS variant supports the required
 transmission speeds and is able to communicate with the inverter.
 There are several variants with different qualities and prices. Most of them

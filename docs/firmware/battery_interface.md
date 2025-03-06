@@ -19,7 +19,7 @@ The following data providers (battery interfaces) are supported:
 
 The MQTT battery provider is the most generic interface. Use it if your battery already
 publishes state of charge and/or voltage information to the MQTT broker. This option does
-not require to separately connect OpenDTU-OnBattery to your battery (managemen
+not require to separately connect OpenDTU-OnBattery to your battery (management
 system), i.e., no setup of hardware is required to use this interface.
 
 Refer to the [MQTT battery settings

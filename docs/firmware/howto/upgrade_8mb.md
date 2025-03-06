@@ -77,7 +77,7 @@ OTA support. Other variants use the new layout for 8 MB of flash memory.
     might revert to default values after downgrading.
 
 !!!warning "4MB flash"
-    Dowgrading a device with 4MB of flash requires writing the older factory
+    Downgrading a device with 4MB of flash requires writing the older factory
     binary using a wired connection as changing the firmware over-the-air is
     not supported, neither for updates nor for downgrades.
 
@@ -88,7 +88,7 @@ firmware sizes.
 
 ## Background
 
-To accomodate a larger firmware binary, the ESP32 flash memory partition layout
+To accommodate a larger firmware binary, the ESP32 flash memory partition layout
 changed with the release of OpenDTU-OnBattery version 2024.08.18. All firmware
 released since then uses this new partition layout. Firmware variants `generic`
 and `generic_esp32` are no longer available.
@@ -109,7 +109,7 @@ and `generic_esp32` are no longer available.
 * ESP32 with 4 MB of flash memory using the `generic_esp32_4mb_no_ota` variant
   use the same new layout except that there is no `app1` partition. This is why
   there is no support for OTA updates when using this partition layout. This
-  layout does, however, fit 4 MB of flash while also accomodating more space
+  layout does, however, fit 4 MB of flash while also accommodating more space
   (the same amount as for devices with &ge;&nbsp;8 MB) for the firmware.
 
 See [#1025](https://github.com/hoylabs/OpenDTU-OnBattery/issues/1025) for

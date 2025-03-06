@@ -3,8 +3,8 @@
 ## Step by Step
 
 1. [Download](https://git-scm.com/downloads/){target=_blank} and install Git.
-1. Install the prerequisits to be able to [build the
-   WebApp](compile_webapp.md#install-prerequisits).
+1. Install the prerequisites to be able to [build the
+   WebApp](compile_webapp.md#install-prerequisites).
 1. Install [Visual Studio Code](https://code.visualstudio.com/download){target=_blank} (vscode).
 1. In vscode, install the [PlatformIO
    Extension](https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide){target=_blank}.

@@ -64,7 +64,7 @@ particular.
 The ESP32's bootloader will print messages on UART0 on every boot. If a
 peripheral is connected to UART0, this peripheral will receive these messages.
 If the peripheral is not robust against invalid messages and, depending on the
-baud rate, invalid UART chararacters, it may cease to function properly.
+baud rate, invalid UART characters, it may cease to function properly.
 
 ### Firmware Messages
 
@@ -79,7 +79,7 @@ instead available on the virtual serial interface of the native USB connection.
 
 ## SPI Busses
 
-ESP32 and ESP32-S3 chips provide four seperate SPI interfaces. Two of them are
+ESP32 and ESP32-S3 chips provide four separate SPI interfaces. Two of them are
 reserved for communicating with the flash and/or PSRAM. The remaining two are
 free to use for peripherals. This means only two SPI peripherals can be
 connected at a time. The following peripherals need an SPI bus each:
@@ -87,4 +87,4 @@ connected at a time. The following peripherals need an SPI bus each:
 * NRF24 radio module
 * CMT2300 radio module
 * Huawei CAN interface
-* Some diplays
+* Some displays

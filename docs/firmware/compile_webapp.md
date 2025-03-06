@@ -2,7 +2,7 @@
 
 ## General information
 
-The WebApp works completly independent from the C/C++ firmware. When compiling
+The WebApp works completely independent of the C/C++ firmware. When compiling
 the firmware, the pre-compiled WebApp will be embedded into the firmware `.bin`
 file. The WebApp is served to the browser by the embedded web server and then
 runs on the client side. The communication between the frontend and the ESP32
@@ -22,10 +22,10 @@ automatically to your ESP32 (configurable IP address). That means you can
 develop the webinterface without flashing the ESP32 (if the WebAPI stays the
 same).
 
-## Install prerequisits
+## Install prerequisites
 
 * Determine the version of Node.js to be used: See the value for `node-version`
-  in the [Github workflow][3], which is the canonical version to use.
+  in the [GitHub workflow][3], which is the canonical version to use.
 * Install Node.js to be able to work with the WebApp.
 * The `yarn` package manager is required to install Node.js packages and to
   execute commands related to the WebApp. To make `yarn` available, you should
@@ -52,7 +52,7 @@ same).
 ## Building the WebApp
 
 The WebApp is build using `yarn`. First of all you have to install or update
-all the dependencies. Afterwards the app will be build. Start a Terminal of
+all the dependencies. Afterwards the app will be built. Start a Terminal of
 your choice and enter the following commands:
 
 ```bash

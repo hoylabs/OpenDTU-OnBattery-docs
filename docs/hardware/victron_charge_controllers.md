@@ -8,7 +8,7 @@ This allows OpenDTU-OnBattery to
 * read data from the charge controller
 * display the data in the web UI
 * publish the data to the MQTT broker
-* and make the data auto-discoverable in HomeAssistent.
+* and make the data auto-discoverable in HomeAssistant.
 
 Additionally, knowing the amount of solar power currently being produced, can
 be leveraged by the Dynamic Power Limiter to implement (Full)

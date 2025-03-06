@@ -3,8 +3,8 @@
 ## Step by Step
 
 1. Install [PlatformIO Core](https://platformio.org/install/cli){target=_blank} (PIO).
-1. Install the prerequisits to be able to [build the
-   WebApp](compile_webapp.md#install-prerequisits).
+1. Install the prerequisites to be able to [build the
+   WebApp](compile_webapp.md#install-prerequisites).
 1. Clone the [source code repository](https://github.com/hoylabs/OpenDTU-OnBattery).
    You really have to clone the source code repository. Do not download and
    extract a source ZIP file. During the build process the Git hash is embedded

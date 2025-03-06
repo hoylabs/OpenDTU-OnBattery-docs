@@ -20,7 +20,7 @@ DevKit Board with a `N16R2` type of module.
     * Details can be found in the [ESP32 datasheet][1], [ESP32-S3
       datasheet][2], or even the [ESP32-S3 Technical Reference Manual][7].
     * These parts are manufactured by Espressif.
-    * A popular cosumer product integrating these chips directly are Shelly
+    * A popular consumer product integrating these chips directly are Shelly
       devices.
 * ![Module](../assets/images/hardware/esp32_module.png){align=right width=150}
   **Module**: Refers to an assembled part consisting of an ESP32(-S3) chip and
@@ -32,7 +32,7 @@ DevKit Board with a `N16R2` type of module.
     * Details can be found in the respective datasheets (non-exhaustive list):
       [ESP32-WROOM-32][3], [ESP32-WROOM-32D/U][4], [ESP32-S3-WROOM-1][5], or
       [ESP32-S3-WROOM-2][6].
-    * These modules are orginally manufactured by Espressif, but there are
+    * These modules are originally manufactured by Espressif, but there are
       compatible knock-off products advertised under identical part numbers.
     * Using these modules simplifies integration into custom applications.
       Popular consumer products using these modules are ESP32-based relay
@@ -81,25 +81,25 @@ has native USB support, freeing one hardware UART.
 Use a board which integrates one of the following modules:
 
 | ESP32-S3-WROOM-... | Flash | PSRAM | Antenna   |
-| ------------------:| ----: | ----: | --------- |
-| ...1U-N16R8        | 16 MB |  8 MB | external  |
-| ...1-N16R8         | 16 MB |  8 MB | PCB Trace |
-| ...1U-N16R2        | 16 MB |  2 MB | external  |
-| ...1-N16R2         | 16 MB |  2 MB | PCB Trace |
-| ...1U-N16          | 16 MB |   -   | external  |
-| ...1-N16           | 16 MB |   -   | PCB Trace |
-| ...1U-N8R8         |  8 MB |  8 MB | external  |
-| ...1-N8R8          |  8 MB |  8 MB | PCB Trace |
-| ...1U-N8R2         |  8 MB |  2 MB | external  |
-| ...1-N8R2          |  8 MB |  2 MB | PCB Trace |
-| ...1U-N8           |  8 MB |   -   | external  |
-| ...1-N8            |  8 MB |   -   | PCB Trace |
-| ...2-N16R8V        | 16 MB |  8 MB | PCB Trace |
-| ...2-N32R8V        | 32 MB |  8 MB | PCB Trace |
+|-------------------:|------:|------:|-----------|
+|        ...1U-N16R8 | 16 MB |  8 MB | external  |
+|         ...1-N16R8 | 16 MB |  8 MB | PCB Trace |
+|        ...1U-N16R2 | 16 MB |  2 MB | external  |
+|         ...1-N16R2 | 16 MB |  2 MB | PCB Trace |
+|          ...1U-N16 | 16 MB |     - | external  |
+|           ...1-N16 | 16 MB |     - | PCB Trace |
+|         ...1U-N8R8 |  8 MB |  8 MB | external  |
+|          ...1-N8R8 |  8 MB |  8 MB | PCB Trace |
+|         ...1U-N8R2 |  8 MB |  2 MB | external  |
+|          ...1-N8R2 |  8 MB |  2 MB | PCB Trace |
+|           ...1U-N8 |  8 MB |     - | external  |
+|            ...1-N8 |  8 MB |     - | PCB Trace |
+|        ...2-N16R8V | 16 MB |  8 MB | PCB Trace |
+|        ...2-N32R8V | 32 MB |  8 MB | PCB Trace |
 
 Make sure that the board actually uses the native USB capability, such that the
 third hardware UART becomes available. There are boards with two USB
-connectors, where one connectnatively to the ESP32. In that case, the board is
+connectors, where one connects natively to the ESP32. In that case, the board is
 fine. On board with only one USB connector, look out for a USB to UART
 transceiver. If there is one on the board, the chip is possibly not connected
 natively to the USB port.

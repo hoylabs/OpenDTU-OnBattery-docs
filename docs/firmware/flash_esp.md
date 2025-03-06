@@ -2,7 +2,7 @@
 
 ## Multiple USB-Ports
 
-You board may be equipped with multiple USB ports. This is mostly the case for
+Your board may be equipped with multiple USB ports. This is mostly the case for
 ESP32-S3 boards. One of the port connects to a USB-UART bridge on the board,
 while the other connects to the ESP32 natively using USB. The former port may
 be labeled "UART" or "COM" and the latter port may be labeled "USB". On some
@@ -54,7 +54,7 @@ tab below that matches your flash tool.
 
     The easiest, platform-independent method. Requires Chrome, Brave, or Edge
     browser. Only installs firmware which has been released through
-    [Github](https://github.com/hoylabs/OpenDTU-OnBattery/releases).
+    [GitHub](https://github.com/hoylabs/OpenDTU-OnBattery/releases).
 
 === "Espressif Web Flasher :material-linux::material-apple::material-microsoft-windows:"
 

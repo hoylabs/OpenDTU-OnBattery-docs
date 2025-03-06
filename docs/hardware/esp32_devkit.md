@@ -30,7 +30,7 @@ merely compatible imitations.
     Get a version with at least 8 MB of flash memory to be able to use OTA updates.
 
 Versions of this board with 8 MB or more of flash memory are available, but
-harder to find. When searching for such a board by keywords, mostely ESP32-S3
+harder to find. When searching for such a board by keywords, mostly ESP32-S3
 boards come up.
 
 Note that Espressif offers the following ESP32-DevKitC variants:

@@ -2402,6 +2402,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Upgrade from OpenDTU
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2411,6 +2422,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#partition-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partition Layout
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2732,6 +2780,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#partition-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partition Layout
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2762,24 +2836,35 @@
 
 
 <h1 id="upgrade-from-opendtu">Upgrade from OpenDTU</h1>
-<p>In general, one can switch seamlessly from OpenDTU to OpenDTU-OnBattery, as the
-parts and features inherited from the upstream project are kept compatible.
-This is particularly true for the settings.</p>
-<p>However, when switching from OpenDTU to OpenDTU-OnBattery, performing an OTA
+<div class="admonition note">
+<p class="admonition-title">Configuraton Backup</p>
+<p>Download a backup of your <code>config.json</code> using the Web UI before switching
+between OpenDTU and OpenDTU-OnBattery.</p>
+</div>
+<h2 id="partition-layout">Partition Layout</h2>
+<p>When switching from OpenDTU to OpenDTU-OnBattery, performing an OTA
 update will fail, as the OpenDTU-OnBattery firmware images are too large to fit
 the upstream's partition layout. This project's partition layout for the ESP32
-flash memory is therefore different from the upstream project as of version
-2024.08.18. Follow the respective <a href="../upgrade_8mb/">upgrade guide</a>, which is
-also applicable when upgrading from OpenDTU to OpenDTU-OnBattery.</p>
-<p>In case you want to switch back to OpenDTU (without losing settings), you may
-do so by</p>
+flash memory is different from the upstream project as of version 2024.08.18.
+Follow the respective <a href="../upgrade_8mb/">upgrade guide</a>, which is also applicable
+when upgrading from OpenDTU to OpenDTU-OnBattery.</p>
+<p>Note that settings are preserved when following the upgrade guide.</p>
+<p>In case you want to switch back to OpenDTU, you may do so by</p>
 <ul>
 <li>performing an OTA update using the respective OpenDTU (non-factory) firmware
-  binary (unless you are using an OpenDTU-OnBattery variant without OTA
-  support).</li>
+  binary, unless you are using an OpenDTU-OnBattery variant without OTA
+  support. This works as OpenDTU happily accepts to use the larger partitions.</li>
 <li>writing the OpenDTU factory image suitable for your board using a USB
-  connection.</li>
+  connection, which will reset the partition layout to the upstream version.</li>
 </ul>
+<h2 id="settings">Settings</h2>
+<p>In general, one can switch seamlessly from OpenDTU to OpenDTU-OnBattery, as the
+parts and features inherited from the upstream project are kept compatible.
+This is particularly true for the settings. Some settings are converted when
+upgrading from OpenDTU.</p>
+<p>Moving back to OpenDTU from OpenDTU-OnBattery is <strong>not</strong> seamless, so you
+should download a backup of your <code>config.json</code> file from the Web UI <strong>before</strong>
+upgrading to OpenDTU-OnBattery, in case you wish to return to OpenDTU.</p>
 
 
 
@@ -2802,7 +2887,7 @@ do so by</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 18, 2024 14:45:45</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 28, 2025 17:21:29</span>
   </span>
 
     

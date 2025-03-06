@@ -51,7 +51,7 @@ same).
 
 ## Building the WebApp
 
-The WebApp is build using `yarn`. First of all you have to install or update
+The WebApp is built using `yarn`. First of all you have to install or update
 all the dependencies. Afterwards the app will be built. Start a Terminal of
 your choice and enter the following commands:
 

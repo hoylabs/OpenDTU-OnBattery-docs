@@ -7,7 +7,7 @@
 ## Settings / Parameters
 
 !!! note "Note"
-    Some of these settings apply to the Wi-Fi interface and the ethernet interface (if available on your board and configured). If ethernet is connected, the Wi-Fi connection will be disabled and it's settings will be transferred to the ethernet interface (also the other way around). The ethernet interface has higher priority.
+    Some of these settings apply to the Wi-Fi interface and the ethernet interface (if available on your board and configured). If ethernet is connected, the Wi-Fi connection will be disabled and its settings will be transferred to the ethernet interface (also the other way around). The ethernet interface has higher priority.
 
 ### WiFi Configuration
 

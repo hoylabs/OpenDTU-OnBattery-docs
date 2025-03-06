@@ -28,13 +28,13 @@ A custom name that identifies the inverter. You can choose whatever you want.
 
 #### Table columns :material-table-lock:{title="Read only Table"}
 
-| Name   | Description                                                                                                                                                                      |
-|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| #      | Grips to change the order of the inverters in the Live View                                                                                                                      |
+| Name   | Description |
+| ------ | ----------- |
+| #      | Grips to change the order of the inverters in the Live View |
 | Status | Indicates whether Poll and Send are enabled. Yellow means only during the day, black also at night.<ul><li>:material-arrow-down: Poll</li><li>:material-arrow-up: Send</li></ul> |
-| Serial | Serial number                                                                                                                                                                    |
-| Name   | Custom name                                                                                                                                                                      |
-| Type   | The detected inverter type based on the serial number. If you get `Unknown` in this column you either mistyped the number or your inverter is not yet supported.                 |
+| Serial | Serial number |
+| Name   | Custom name |
+| Type   | The detected inverter type based on the serial number. If you get `Unknown` in this column you either mistyped the number or your inverter is not yet supported. |
 
 #### Save order :material-button-cursor:{title="Button"}
 

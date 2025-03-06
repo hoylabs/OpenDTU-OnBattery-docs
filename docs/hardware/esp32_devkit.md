@@ -35,12 +35,12 @@ boards come up.
 
 Note that Espressif offers the following ESP32-DevKitC variants:
 
-| Board Name         | Module           | Flash | PSRAM | Antenna   |
-|--------------------|------------------|-------|-------|-----------|
-| ESP32-DevKitC-32E  | ESP32-WROOM-32E  | 4 MB  | -     | PCB Trace |
-| ESP32-DevKitC-32UE | ESP32-WROOM-32UE | 4 MB  | -     | external  |
-| ESP32-DevKitC-VE   | ESP32-WROVER-E   | 8 MB  | 8 MB  | PCB Trace |
-| ESP32-DevKitC-VIE  | ESP32-WROVER-IE  | 8 MB  | 8 MB  | external  |
+| Board Name         | Module           | Flash| PSRAM| Antenna   |
+| ------------------ | ---------------- | ---- | ---- | --------- |
+| ESP32-DevKitC-32E  | ESP32-WROOM-32E  | 4 MB | -    | PCB Trace |
+| ESP32-DevKitC-32UE | ESP32-WROOM-32UE | 4 MB | -    | external  |
+| ESP32-DevKitC-VE   | ESP32-WROVER-E   | 8 MB | 8 MB | PCB Trace |
+| ESP32-DevKitC-VIE  | ESP32-WROVER-IE  | 8 MB | 8 MB | external  |
 
 The ESP32-DevKitC-VIE also has a PCB trace antenna, which can be used instead
 of the external PCB connector by re-soldering the respective resistor close to

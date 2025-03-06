@@ -8,7 +8,7 @@ Depending on the ESP32 you use and depending on the firmware variant, either
 two or three hardware UARTs are available.
 
 | MCU      | Firmware              | UARTs |
-|----------|-----------------------|-------|
+| -------- | --------------------- | ----- |
 | ESP32    | any                   | 2     |
 | ESP32-S3 | `generic_esp32s3`     | 2     |
 | ESP32-S3 | `generic_esp32s3_usb` | 3     |

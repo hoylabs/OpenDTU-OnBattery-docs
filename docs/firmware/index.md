@@ -23,13 +23,13 @@ for the first time and after erasing the flash (to start from scratch).
   PlatformIO (PIO) environment name.
 * Use the non-factory binaries to perform [OTA updates](update.md).
 
-| PIO Environment                        | MCU      | Flash Size          | Comment                                                                                                                        |
-|----------------------------------------|----------|---------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| `generic_esp32s3_usb[.factory].bin`    | ESP32-S3 | &ge;&nbsp;8&nbsp;MB | For [OpenDTU Fusion](../3rd_party/opendtu_fusion.md) and ESP32-S3 boards with native USB connection.                           |
-| `generic_esp32s3[.factory].bin`        | ESP32-S3 | &ge;&nbsp;8&nbsp;MB | For boards that only have a USB-UART bridge to the ESP32-S3.                                                                   |
-| `generic_esp32_8mb[.factory].bin`      | ESP32    | &ge;&nbsp;8&nbsp;MB | For ESP32 with at least 8&nbsp;MB of flash.                                                                                    |
-| `generic_esp32_4mb_no_ota.factory.bin` | ESP32    | 4&nbsp;MB           | For ESP32 with only 4&nbsp;MB of flash, **without** support for [OTA updates](update.md).                                      |
-| `generic_esp32[.factory].bin`          | ESP32    | 4&nbsp;MB           | [End of Life](howto/upgrade_8mb.md#background), do not use for new devices.                                                    |
+| PIO Environmenti                       | MCU      | Flash Size          | Comment     |
+| -------------------------------------- | -------- | ------------------- | ----------- |
+| `generic_esp32s3_usb[.factory].bin`    | ESP32-S3 | &ge;&nbsp;8&nbsp;MB | For [OpenDTU Fusion](../3rd_party/opendtu_fusion.md) and ESP32-S3 boards with native USB connection. |
+| `generic_esp32s3[.factory].bin`        | ESP32-S3 | &ge;&nbsp;8&nbsp;MB | For boards that only have a USB-UART bridge to the ESP32-S3. |
+| `generic_esp32_8mb[.factory].bin`      | ESP32    | &ge;&nbsp;8&nbsp;MB | For ESP32 with at least 8&nbsp;MB of flash. |
+| `generic_esp32_4mb_no_ota.factory.bin` | ESP32    | 4&nbsp;MB           | For ESP32 with only 4&nbsp;MB of flash, **without** support for [OTA updates](update.md). |
+| `generic_esp32[.factory].bin`          | ESP32    | 4&nbsp;MB           | [End of Life](howto/upgrade_8mb.md#background), do not use for new devices. |
 | `generic[.factory].bin`                | ESP32    | 4&nbsp;MB           | [End of Life](howto/upgrade_8mb.md#background), previously [deprecated](howto/migrate_generic.md), do not use for new devices. |
 
 !!! note "Note"

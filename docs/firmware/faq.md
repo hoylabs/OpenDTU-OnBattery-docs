@@ -47,7 +47,7 @@
 ??? question "After the OpenDTU-OnBattery startup the limit is stated as zero but the inverter seems to work properly"
 
     The limit is fetched every 2-4 minutes from the inverter. If it is fetched more often the inverter will create error messages in the event log.
-    Due to the fact that on OpenDTU-OnBattery startup it is unknow when the limit was last queried, a 4-minute delay is applied before the limit will be fetched.
+    Due to the fact that on OpenDTU-OnBattery startup it is unknown when the limit was last queried, a 4-minute delay is applied before the limit will be fetched.
 
 ## Debugging
 

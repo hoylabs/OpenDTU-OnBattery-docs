@@ -87,13 +87,7 @@ assumed that you know what you are doing.
             "clk": 22
         },
         "eth": {
-            "enabled": false,
-            "phy_addr": -1,
-            "power": -1,
-            "mdc": -1,
-            "mdio": -1,
-            "type": -1,
-            "clk_mode": -1
+            "enabled": false
         }
     },
     {
@@ -107,13 +101,7 @@ assumed that you know what you are doing.
             "cs": 5
         },
         "eth": {
-            "enabled": false,
-            "phy_addr": -1,
-            "power": -1,
-            "mdc": -1,
-            "mdio": -1,
-            "type": -1,
-            "clk_mode": -1
+            "enabled": false
         },
         "display": {
             "type": 2,

@@ -83,7 +83,7 @@ If you like this project you can show your appreciation by making a small
 donation. This will help with offsetting the cost of hardware bought to develop
 and test features, or offsetting recurring costs like domain registrations.
 
-[![Donate](https://img.shields.io/badge/Ko--fi-donate-5e8bde?style=for-the-badge&logo=kofi&logoColor=5e8bde)](https://ko-fi.com/schlimmchen){target=_blank}
+[![Donate](https://img.shields.io/badge/Ko--fi-donate-5e8bde?style=for-the-badge&logo=kofi&logoColor=5e8bde)](https://ko-fi.com/hoylabs){target=_blank}
 
 [1]: https://www.hoymiles.com/
 [2]: https://www.github.com/hoylabs/OpenDTU-OnBattery/discussions

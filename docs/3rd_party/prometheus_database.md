@@ -4,6 +4,10 @@ The prometheus database is used for many projects for data collection. It is rel
 
 For installation, you can follow a [guide provided by the prometheus devs](https://prometheus.io/docs/introduction/first_steps/).
 
+!!! danger "Important"
+    The part of the API (`/api/prometheus/metrics`) is **not** the database server!
+    The database is always installed on an external host and never on OpenDTU-OnBattery itself!
+
 Here are some distro-specific guides for linux:
 
 - Debian/Ubuntu/Raspbian: [See this guide here](https://gist.github.com/eiri/1102e1f3c168684b5a8b0e7a0f5a5a14) (Although there should also be something in the APT repos)

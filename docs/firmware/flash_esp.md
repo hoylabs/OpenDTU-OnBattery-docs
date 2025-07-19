@@ -84,8 +84,8 @@ tab below that matches your flash tool.
     esptool --port COM1 erase_flash
 
     esptool --baud 921600 --port COM1 --chip esp32 \
-        --before default_reset --after hard_reset \
-        write_flash 0x0 opendtu-generic*.factory.bin
+        --before default-reset --after hard-reset \
+        write-flash 0x0 opendtu-generic*.factory.bin
     ```
 
     * Adjust the `--chip` parameter to the actual chip in use, e.g., `esp32-s3`.

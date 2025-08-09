@@ -87,6 +87,6 @@ and test features, or offsetting recurring costs like domain registrations.
 
 [1]: https://www.hoymiles.com/
 [2]: https://www.github.com/hoylabs/OpenDTU-OnBattery/discussions
-[3]: https://discord.gg/WzhxEY62mB
+[3]: https://discord.gg/46hWaXsn
 [4]: https://github.com/tbnobody/OpenDTU
 [^1]: Firmware over-the-air (OTA) updates are **not** supported on ESP32 with only 4MB of flash memory.

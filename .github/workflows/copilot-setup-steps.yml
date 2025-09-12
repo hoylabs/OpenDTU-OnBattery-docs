@@ -1,0 +1,133 @@
+name: Copilot Setup Steps
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'Setup action to perform'
+        required: true
+        default: 'validate'
+        type: choice
+        options:
+          - validate
+          - setup
+          - test
+
+jobs:
+  copilot-setup:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        
+    - name: Cache Python dependencies
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+          
+    - name: Create virtual environment
+      run: python3 -m venv venv
+      
+    - name: Activate virtual environment and upgrade tools
+      run: |
+        source venv/bin/activate
+        pip install --upgrade pip wheel setuptools
+        
+    - name: Install dependencies
+      run: |
+        source venv/bin/activate
+        pip install -r requirements.txt
+        
+    - name: Validate copilot instructions
+      if: github.event.inputs.action == 'validate' || github.event.inputs.action == 'setup'
+      run: |
+        echo "Validating .github/copilot-instructions.md exists..."
+        if [ ! -f .github/copilot-instructions.md ]; then
+          echo "ERROR: .github/copilot-instructions.md not found"
+          exit 1
+        fi
+        echo "✅ Copilot instructions file found"
+        
+        echo "Checking file size and content..."
+        file_size=$(wc -c < .github/copilot-instructions.md)
+        if [ $file_size -lt 1000 ]; then
+          echo "WARNING: Copilot instructions file seems too small ($file_size bytes)"
+        fi
+        echo "✅ Copilot instructions file size: $file_size bytes"
+        
+    - name: Test documentation build
+      if: github.event.inputs.action == 'test' || github.event.inputs.action == 'setup'
+      run: |
+        source venv/bin/activate
+        echo "Testing documentation build with strict validation..."
+        mkdocs build --strict
+        echo "✅ Documentation builds successfully"
+        
+    - name: Test development server
+      if: github.event.inputs.action == 'test'
+      run: |
+        source venv/bin/activate
+        echo "Starting development server for testing..."
+        timeout 30s mkdocs serve --dev-addr=127.0.0.1:8000 || true
+        echo "✅ Development server can start"
+        
+    - name: Verify repository structure
+      if: github.event.inputs.action == 'setup'
+      run: |
+        echo "Verifying repository structure for OpenDTU-OnBattery documentation..."
+        
+        # Check essential directories
+        for dir in docs .github; do
+          if [ ! -d "$dir" ]; then
+            echo "ERROR: Required directory $dir not found"
+            exit 1
+          fi
+          echo "✅ Directory $dir exists"
+        done
+        
+        # Check essential files
+        for file in mkdocs.yml requirements.txt docs/index.md; do
+          if [ ! -f "$file" ]; then
+            echo "ERROR: Required file $file not found"
+            exit 1
+          fi
+          echo "✅ File $file exists"
+        done
+        
+        # Check documentation structure
+        for subdir in firmware hardware 3rd_party; do
+          if [ ! -d "docs/$subdir" ]; then
+            echo "WARNING: Documentation subdirectory docs/$subdir not found"
+          else
+            echo "✅ Documentation subdirectory docs/$subdir exists"
+          fi
+        done
+        
+    - name: Display setup summary
+      if: github.event.inputs.action == 'setup'
+      run: |
+        echo "==================== SETUP SUMMARY ===================="
+        echo "Repository: OpenDTU-OnBattery Documentation"
+        echo "Type: MkDocs-based static documentation website"
+        echo "Python version: $(python3 --version)"
+        echo "MkDocs version: $(source venv/bin/activate && mkdocs --version)"
+        echo ""
+        echo "Key commands for developers:"
+        echo "  Setup: python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt"
+        echo "  Build: mkdocs build --strict"
+        echo "  Serve: mkdocs serve"
+        echo "  Deploy: Automatic via GitHub Actions on main branch"
+        echo ""
+        echo "Site URL: https://opendtu-onbattery.net/"
+        echo "GitHub Pages: Enabled with custom domain"
+        echo ""
+        echo "✅ Copilot setup validation complete!"

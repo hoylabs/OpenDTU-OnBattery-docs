@@ -9,11 +9,21 @@ data is also published to the MQTT broker and it is presented in the web UI.
 
 The following data providers (battery interfaces) are supported:
 
-1. Pylontech using CAN
-2. Pytes using CAN
-3. [JK BMS](../hardware/jkbms/index.md) using UART
-4. Victron SmartShunt using [VE.Direct](../hardware/vedirect.md)
-5. [MQTT](#mqtt)
+1. **CAN Bus Based Systems:**
+   - Pylontech using CAN
+   - Pytes using CAN
+   - SBS (Smart Battery System) using CAN
+
+2. **UART Based Systems:**
+   - [JK BMS](../hardware/jkbms/index.md) using UART
+   - JBD BMS (Jin Biao Da BMS) using UART
+   - Zendure SuperBase battery systems using UART
+
+3. **VE.Direct Protocol:**
+   - Victron SmartShunt using [VE.Direct](../hardware/vedirect.md)
+
+4. **Generic Interfaces:**
+   - [MQTT](#mqtt) - for any battery system that publishes data to MQTT
 
 ## MQTT
 

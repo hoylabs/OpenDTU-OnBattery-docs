@@ -19,6 +19,10 @@ Always reference these instructions first and fallback to search or bash command
 - `mkdocs serve` -- starts development server on http://127.0.0.1:8000/ with live reload
 - Live reload rebuilds in 4-5 seconds when files change
 
+### Advanced tasks for documentation development:
+- Look at the code of https://github.com/hoylabs/OpenDTU-OnBattery to generate new documentation
+- Make sure spelling is correct
+
 ## Validation
 
 ### Manual validation scenarios:

@@ -136,14 +136,7 @@ nav:
     - Dynamic Power Limiter:
       - firmware/dpl.md
       - firmware/solar_passthrough.md
-    - Battery Interfaces:
-      - Overview: firmware/battery_interface.md
-      - JBD BMS: firmware/battery_interface_jbdbms.md
-      - Pytes: firmware/battery_interface_pytes.md
-      - SBS (Smart Battery System): firmware/battery_interface_sbs.md
-      - Zendure SuperBase: firmware/battery_interface_zendure.md
-    - Power Meter Interfaces: firmware/powermeter_interfaces.md
-    - Solar Charger Interfaces: firmware/solarcharger_interfaces.md
+    - Battery Interface: firmware/battery_interface.md
     - Web UI:
       - firmware/configuration/login.md
       - Live View:

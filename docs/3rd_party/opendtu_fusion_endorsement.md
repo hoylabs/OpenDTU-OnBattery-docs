@@ -8,7 +8,6 @@ OpenDTU Fusion boards, accessories (such as cases), and kits are available
 exclusively from the following trusted suppliers:
 
 - [AllianceApps](https://shop.allianceapps.io/)
-- [Semy3D](https://shop.semy3d.de/)
 
 For the best overall experience, we recommend using these distribution channels
 when purchasing OpenDTU Fusion hardware. Doing so supports suppliers who align

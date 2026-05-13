@@ -6,8 +6,10 @@
 !!! note "Hoymiles HMS-xxxx-xT-NA compatibility remark"
     You have to change the Country/Region in the [DTU settings](../firmware/configuration/dtu_settings.md#cmt2300a-regioncountry).
 
-!!! note "Inverters with integrated Wi-Fi NOT supported"
-    **No** inverter with integrated Wi-Fi (identify by the "W" in the name (e.g. HMS-xxxW)) are supported by OpenDTU-OnBattery.
+!!! note "Inverters with integrated Wi-Fi"
+    Some inverters with integrated Wi-Fi (identified by the "W" in the name, e.g. HMS-800W-2T) are supported by
+    OpenDTU-OnBattery. They communicate directly over your local Wi-Fi network — no RF module is required for these
+    models. See [Inverter Settings](../firmware/configuration/inverter_settings.md) for how to add a Wi-Fi inverter.
 
 | Model                | Required RF Module | DC Inputs | MPP-Tracker | AC Phases | Serial Prefix          |
 | ---------------------| ------------------ | :-------: | :---------: | :-------: | :--------------------: |
@@ -29,6 +31,7 @@
 | Hoymiles HMS-600-2T  | CMT2300A           | 2         | 2           | 1         | `1143`, `1144`, `1410` |
 | Hoymiles HMS-700-2T  | CMT2300A           | 2         | 2           | 1         | `1143`, `1144`, `1410` |
 | Hoymiles HMS-800-2T  | CMT2300A           | 2         | 2           | 1         | `1143`, `1144`, `1410` |
+| Hoymiles HMS-800W-2T | None (Wi-Fi)       | 2         | 2           | 1         | —                      |
 | Hoymiles HMS-900-2T  | CMT2300A           | 2         | 2           | 1         | `1143`, `1144`, `1410` |
 | Hoymiles HMS-1000-2T | CMT2300A           | 2         | 2           | 1         | `1143`, `1144`, `1410` |
 | Hoymiles HMS-1600-4T | CMT2300A           | 4         | 4           | 1         | `1164`                 |

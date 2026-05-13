@@ -49,7 +49,7 @@ serial will be replaced with the serial number of the inverter.
 | `[serial]/radio/rx_fail_nothing`          | R     | Amount of failed packets, nothing was received       |                            |
 | `[serial]/radio/rx_fail_partial`          | R     | Amount of failed packets, some fragments were missing |                            |
 | `[serial]/radio/rx_fail_corrupt`          | R     | Amount of failed packets, payload corrupt            |                            |
-| `[serial]/radio/rssi`                     | R     | RSSI of last received packet (Inverters with NRF24 module only support 2 states. > -64dBm and < -64dBm. In the first case -30 dBm is shown, in the second one -80 dBm) | dBm                        |
+| `[serial]/radio/rssi`                     | R     | Signal strength of last communication. For NRF24 inverters only two states are reported: -30 dBm (> -64 dBm) or -80 dBm (< -64 dBm). For Wi-Fi inverters (e.g. HMS-800W-2T) the actual Wi-Fi RSSI of the ESP32 is reported. | dBm |
 | `[serial]/status/reachable`               | R     | Indicates whether the inverter is reachable          | 0 or 1                     |
 | `[serial]/status/producing`               | R     | Indicates whether the inverter is producing AC power | 0 or 1                     |
 | `[serial]/status/last_update`             | R     | Unix timestamp of last inverter statistics update    | seconds since JAN 01 1970 (UTC) |

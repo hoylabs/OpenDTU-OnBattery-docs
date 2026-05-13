@@ -24,6 +24,20 @@ The unique serial number of the inverter. It can be found on a label at the back
 
 A custom name that identifies the inverter. You can choose whatever you want.
 
+#### Wi-Fi Inverter :material-toggle-switch:{title="Switch"}
+
+Enable this toggle for inverters with integrated Wi-Fi (e.g. HMS-800W-2T). When enabled, the inverter
+communicates over your local network rather than via an RF radio module. No NRF24L01+ or CMT2300A hardware
+is required for these models.
+
+#### IP Address :material-form-textbox:{title="Textbox"}
+
+_(Only shown when Wi-Fi Inverter is enabled.)_
+
+The local IP address of the inverter's built-in DTU. The inverter must be reachable from the ESP32 on TCP
+port 10081. It is recommended to assign a static IP address (or a DHCP reservation) to the inverter so
+that this value does not change.
+
 ### Inverter List
 
 #### Table columns :material-table-lock:{title="Read only Table"}

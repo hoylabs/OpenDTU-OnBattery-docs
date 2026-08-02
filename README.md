@@ -32,10 +32,10 @@ python -m venv venv
 The above command will create a Virtual Environment in the subdirectory venv in the drive & subdirectory you have chosen.
 
 Activate the Virtual Environment:
-- For Linux Based OS Or Mac-OS: source venv/bin/activate
-- For Windows With CMD: venv\Scripts\activate.bat
-- For Windows With PowerShell: .\venv\Scripts\activate.ps1
-- For Windows With Unix Like Shells For Example Git Bash CLI: source venv/Scripts/activate
+- For Linux-based operating systems or macOS: ```source venv/bin/activate```
+- For Windows With CMD: ```venv\Scripts\activate.bat```
+- For Windows With PowerShell: ```.\venv\Scripts\activate.ps1```
+- For Windows With Unix Like Shells For Example Git Bash CLI: ```source venv/Scripts/activate```
 
 Download the OpenDTU-OnBattery-docs ZIP file and expand it inside the venv directory.
 Using the command editor (cmd.exe), switch to that directory and give the command:
@@ -52,6 +52,3 @@ Using the command editor (cmd.exe), switch to that directory you saved the clone
 mkdocs serve
 ```
 Project settings are configured by default using a YAML configuration file in the project directory named mkdocs.yml. You can specify another path for it by using the -f/--config-file option (see mkdocs build --help).
-
-
-```

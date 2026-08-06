@@ -6,7 +6,7 @@ repo_name: OpenDTU-OnBattery
 site_name: OpenDTU-OnBattery Documentation
 site_description: Software for ESP32 to talk to Hoymiles Inverters and battery peripherals
 site_author: "OpenDTU Community"
-copyright: '&copy; 2024 OpenDTU Community &ndash; based on <a href="https://opendtu.solar" target="_blank">OpenDTU</a>'
+copyright: '&copy; 2026 OpenDTU Community &ndash; based on <a href="https://opendtu.solar" target="_blank">OpenDTU</a>'
 
 extra:
   social:

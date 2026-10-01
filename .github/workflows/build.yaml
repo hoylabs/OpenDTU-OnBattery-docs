@@ -19,6 +19,10 @@ jobs:
           fetch-depth: 0
           # only the deploy step gets the token, see there
           persist-credentials: false
+      - name: Configure Git Credentials
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
       - name: Install Python and dependencies
         uses: actions/setup-python@v7
         with:
@@ -41,8 +45,6 @@ jobs:
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
         run: |
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           mkdocs gh-deploy --force
         env:

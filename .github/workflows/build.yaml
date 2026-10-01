@@ -43,9 +43,7 @@ jobs:
         run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-          auth=$(printf 'x-access-token:%s' "${GITHUB_TOKEN}" | base64 -w0)
-          echo "::add-mask::${auth}"
-          git config http.https://github.com/.extraheader "AUTHORIZATION: basic ${auth}"
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           mkdocs gh-deploy --force
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,74 @@
+name: PR Preview
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, closed]
+
+permissions:
+  contents: read
+  pull-requests: write  # post/update the sticky comment with the preview link
+
+concurrency: preview-${{ github.ref }}
+
+env:
+  # Previews are published to the GitHub Pages site of this separate repo.
+  # It must not use a custom domain, otherwise its github.io URLs redirect.
+  PREVIEW_REPO: hoylabs/OpenDTU-OnBattery-docs-previews
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+
+    # secrets are not available for PRs from forks, so previews are only
+    # possible for branches of this repository.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Install Python and dependencies
+        if: github.event.action != 'closed'
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.x'
+          cache: 'pip'
+      - if: github.event.action != 'closed'
+        run: pip install --upgrade pip wheel setuptools
+      - if: github.event.action != 'closed'
+        run: pip install -r requirements.txt
+
+      - if: github.event.action != 'closed'
+        run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+      - if: github.event.action != 'closed'
+        uses: actions/cache@v6
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+
+      - name: Build mkdocs
+        if: github.event.action != 'closed'
+        run: |
+          mkdocs build
+          # the preview must not claim the production domain
+          rm -f site/CNAME
+          # keep search engines away from the previews
+          find site -name '*.html' -exec \
+            sed -i 's|<head>|<head><meta name="robots" content="noindex">|' {} +
+
+      # deploys to pr-preview/pr-<number>/ on the gh-pages branch of
+      # PREVIEW_REPO on open/push, and removes that folder again when the PR
+      # is closed. The PR comment is posted using the default GITHUB_TOKEN.
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./site/
+          deploy-repository: ${{ env.PREVIEW_REPO }}
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+          pages-base-url: hoylabs.github.io/OpenDTU-OnBattery-docs-previews
+          token: ${{ secrets.PREVIEW_DEPLOY_TOKEN }}
